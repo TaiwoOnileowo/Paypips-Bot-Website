@@ -1,0 +1,209 @@
+import { FaUsers } from "react-icons/fa";
+import { FaDollarSign } from "react-icons/fa6";
+import { FaChartBar } from "react-icons/fa";
+import { FaCogs } from "react-icons/fa";
+export const navLinks = [
+  {
+    name: "About",
+    href: "about",
+  },
+
+  {
+    name: "How It Works",
+    href: "how-it-works",
+  },
+  {
+    name: "Features",
+    href: "features",
+  },
+  {
+    name: "Pricing",
+    href: "pricing",
+  },
+];
+
+export const features = [
+  {
+    id: 1,
+    icon: <FaDollarSign />,
+    description:
+      "Integrate secure payment gateways to manage subscription payments effortlessly",
+  },
+  {
+    id: 2,
+    icon: <FaUsers />,
+
+    description:
+      "Easily add, remove, and manage members in your Telegram community with our advanced bot.",
+  },
+  {
+    id: 3,
+    icon: <FaChartBar />,
+    description:
+      "Gain insights into your community's activity and engagement with detailed analytics.",
+  },
+  {
+    id: 4,
+    icon: <FaCogs />,
+    description:
+      "Set custom rules for member access based on their subscription levels",
+  },
+];
+
+export const pricing = [
+  {
+    id: 1,
+    name: "Free",
+    amount: 0,
+    amount_annual: 0,
+    transaction_fee: 10,
+    benefits: {
+      1: "Up to 3 Membership Bots",
+      2: "All payment integrations",
+    },
+    text: "Best if you're making up to $700/mo",
+    button: "Get Started",
+  },
+  {
+    id: 2,
+    name: " Starter",
+    amount: 49,
+    amount_annual: 490,
+    transaction_fee: 3,
+    benefits: {
+      1: "Everything from Free Tier",
+      2: "Access Codes",
+      3: "Lower transaction fees",
+    },
+    text: "Best if you're making up to $2.5K/mo",
+    button: "Start free trial",
+  },
+  {
+    id: 3,
+    name: "Growth",
+    amount: 99,
+    amount_annual: 990,
+    transaction_fee: 1,
+    benefits: {
+      1: "Everything from Starter",
+      2: "Up to 10 Membership Bots",
+      3: "Built-in Affiliate Program",
+    },
+    text: "Best if you're making up to $2.5K/mo",
+    button: "Start free trial",
+  },
+];
+
+export const choose = [
+  {
+    id: 1,
+    title: "Secure Payment Integrations",
+  },
+  {
+    id: 2,
+    title: "Advanced Member Management",
+  },
+  {
+    id: 3,
+    title: "Detailed Analytics",
+  },
+  {
+    id: 4,
+    title: "Custom Access Rules",
+  },
+  {
+    id: 5,
+    title: "Flexible Pricing Options",
+  },
+  {
+    id: 6,
+    title: "User Friendly",
+  },
+  {
+    id: 7,
+    title: "Enhanced Security ",
+  },
+  {
+    id: 8,
+    title: "Built-in Affiliate Program",
+  },
+];
+
+export const faqs = [
+  {
+    id: 1,
+    question: "What is PayPips?",
+    answer:
+      "PayPips is a membership management platform that helps you monetize your Telegram community. You can create a subscription-based community, manage members, and accept payments securely.",
+  },
+  {
+    id: 2,
+    question: "How does PayPips work?",
+    answer:
+      "PayPips integrates with your Telegram community and payment gateways to manage members and accept payments. You can set custom access rules, create subscription plans, and gain insights into your community's activity.",
+  },
+  {
+    id: 3,
+    question: "What payment gateways does PayPips support?",
+    answer:
+      "PayPips supports popular payment gateways like Stripe, PayPal, and Razorpay. You can easily integrate these payment gateways to accept payments from your members securely.",
+  },
+  {
+    id: 4,
+    question: "How can I get started with PayPips?",
+    answer:
+      "You can get started with PayPips by signing up on our website and creating your membership community. You can set up subscription plans, add members, and start accepting payments in minutes.",
+  },
+  // {
+  //   id: 5,
+  //   question: "Can I customize the subscription plans on PayPips?",
+  //   answer:
+  //     "Yes, you can customize the subscription plans on PayPips based on your requirements. You can set the pricing, benefits, and access rules for each plan to offer a personalized experience to your members.",
+  // },
+  {
+    id: 5,
+    question: "Is PayPips secure?",
+    answer:
+      "Yes, PayPips is secure and complies with industry standards for data protection and security. We use encryption and other security measures to protect your data and ensure a safe payment experience for your members.",
+  },
+  // {
+  //   id: 7,
+  //   question: "Can I track the performance of my community on PayPips?",
+  //   answer:
+  //     "Yes, you can track the performance of your community on PayPips with detailed analytics. You can monitor member activity, engagement, and revenue to make informed decisions and optimize your community's growth.",
+  // },
+  // {
+  //   id: 8,
+  //   question: "Does PayPips offer customer support?",
+  //   answer:
+  //     "Yes, PayPips offers customer support to help you with any questions or issues you may have. You can reach out to our support team via email or chat for assistance with your membership community.",
+  // },
+];
+
+export const footer = [
+  {
+    id: "1",
+    text: "Home",
+    link: "#",
+  },
+  {
+    id: "2",
+    text: "Contact",
+    link: "#",
+  },
+  {
+    id: "3",
+    text: "How it Works",
+    link: "#how-it-works",
+  },
+  {
+    id: "4",
+    text: "Features",
+    link: "#features",
+  },
+  {
+    id: "5",
+    text: "About",
+    link: "#about",
+  },
+];
