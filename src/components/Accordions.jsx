@@ -7,7 +7,7 @@ const Accordions = () => {
   return (
     <section
       id="faqs"
-      className="bg-dark-bg flex p-24 absolute pt-16 z-[1] top-[31%] w-[1200px] right-[5%]  shadow shadow-black rounded-[35px] justify-center items-center flex-col "
+      className="bg-dark-bg flex p-24 absolute pb-4 pt-16 z-[1] top-[32.5%] w-[1200px] right-[5%]  shadow shadow-black rounded-[35px] justify-center items-center flex-col "
     >
       <Heading text="Frequently Asked Questions" />
       <div className="mt-24 w-full flex flex-col items-start">

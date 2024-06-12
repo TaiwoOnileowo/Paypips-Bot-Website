@@ -4,7 +4,7 @@ import { FaCheck, FaDollarSign } from "react-icons/fa";
 import { FaBitcoinSign } from "react-icons/fa6";
 import paystack from "../assets/paystack.svg";
 import Heading from "./Heading";
-
+import { FaMoneyBills } from "react-icons/fa6";
 const Payments = () => {
   const [count, setCount] = useState(250);
   const [isAnimating, setIsAnimating] = useState(false);
@@ -105,9 +105,11 @@ const Payments = () => {
               Add free trials
             </li>
           </ul>
-          <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
-           Get Started
-          </button>
+          <a href="https://t.me/PayPipsBot">
+            <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
+              Get Started
+            </button>
+          </a>
         </div>
         <div className="relative text-white flex items-center justify-center">
           <div className="flex flex-col mx-4 items-center gap-8">
@@ -123,7 +125,7 @@ const Payments = () => {
                 scale.second && "scale-forex-div"
               } bg-white z-10 text-primary-purple items-center p-4 rounded-full`}
             >
-              <FaBitcoinSign size={60} />
+              <FaMoneyBills size={60} />
             </div>
             <div
               className={`bg-white z-10 text-black p-6 rounded-full ${
@@ -160,7 +162,7 @@ const Payments = () => {
               <div className="bg-blue-accent p-4 text-white rounded-full">
                 <FaDollarSign size={40} />
               </div>
-              <div>
+              <div className="text-medium-gray">
                 {/* <p className="mt-2 text-xl font-bold">Forex Gig</p> */}
                 <p className="mt-2 text-xl font-bold">Business Tips</p>
                 <p className="font-medium">

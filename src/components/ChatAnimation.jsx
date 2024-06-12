@@ -85,18 +85,21 @@ const ChatAnimation = () => {
       <Heading text="Interactive Feature Walkthrough" />
       <div className="flex mt-16 gap-36">
         <div className="w-[40%] flex justify-center flex-col">
-          <h3 className="uppercase text-gold py-2">Feature Stroll</h3>
+          <h3 className="uppercase text-blue-accent py-2">Feature Stroll</h3>
           <h1 className="text-5xl font-bold py-4">
             Discover Paypips in Action
           </h1>
-          <p className="text-light-gray w-[500px]">
+          <p className="text-muted-text w-[500px]">
             Explore the functionalities of Paypips. From managing payments and
             broadcasting messages to supporting subscribers and analyzing user
             insights, experience the power of our platform firsthand.
           </p>
-          <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
+          <a href="https://t.me/PayPipsBot">
+          <button className="w-[150px]  bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
             Start Exploring
           </button>
+          </a>
+          
         </div>
         <div
           ref={chatBoxRef}

@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="relative mt-[38em] shadow_footer_yellow bg-black  text-white w-full overflow-y-hidden footer-border  py-8 flex pt-24 flex-col items-center gap-24 justify-between"
+      className="relative mt-[35em] shadow_footer_yellow bg-black  text-white w-full overflow-y-hidden footer-border  py-8 flex pt-24 flex-col items-center gap-24 justify-between"
     >
       <div className="blur absolute z-[0] w-[60%]  h-[60%]  top-[80%] rounded-[50%] opacity-40 bg-shining-gradient" />
 
@@ -18,9 +18,11 @@ const Footer = () => {
           Transform your Telegram Community Management
         </p>
         {/* <p className="pt-6 w-[300px] text-center">Transform your Forex Telegram Community Management</p> */}
-        <button className="w-[150px] bg-shining-gradient text-white mr-6 py-[10px] mt-8 shadow_yellow rounded-full px-4">
-          Get Started
-        </button>
+        <a href="https://t.me/PayPipsBot">
+          <button className="w-[150px] bg-shining-gradient text-white mr-6 py-[10px] mt-8 shadow_yellow rounded-full px-4">
+            Get Started
+          </button>
+        </a>
       </div>
       <div className="flex justify-between items-center text-white w-full px-16">
         <ul className="flex gap-6">

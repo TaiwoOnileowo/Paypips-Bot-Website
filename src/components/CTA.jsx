@@ -4,8 +4,10 @@ const CTA = () => {
   return (
     <section
       id="cta"
-      className={`cta-border mb-[38em] relative bg-light-gray flex items-center py-32 pb-52 justify-center `}
-    >      <div className="blur absolute z-[0] w-[60%]  h-[60%] left-[-50%] top-[-30%] rounded-[50%] opacity-40 bg-shining-gradient" />
+      className={`cta-border mb-[35em] relative bg-light-gray flex items-center py-32 pb-52 justify-center `}
+    >
+      {" "}
+      <div className="blur absolute z-[0] w-[60%]  h-[60%] left-[-50%] top-[-30%] rounded-[50%] opacity-40 bg-shining-gradient" />
       <svg viewBox="0 0 1440 137" className=" absolute -top-[20%] rotateX">
         <path
           d="M0 137H1440V114.609H346.775C331.995 114.609 318.039 107.799 308.943 96.1501L248.278 18.4586C239.181 6.8092 225.225 0 210.445 0H0V137Z"
@@ -35,9 +37,11 @@ const CTA = () => {
         <div
           className={` sm:ml-10 ml-0  items-center justify-center flex sm:mt-0 mt-10`}
         >
-          <button className="w-[150px] text-white bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
-            Get Started
-          </button>
+          <a href="https://t.me/PayPipsBot">
+            <button className="w-[150px] text-white bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
+              Get Started
+            </button>
+          </a>
         </div>
       </div>
       {/* </div> */}

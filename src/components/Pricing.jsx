@@ -40,8 +40,7 @@ const Pricing = ({ setActive }) => {
       id="pricing"
       className="relative bg-white pt-12 pb-48 flex flex-col justify-center items-center"
     >
-      
-      <Heading text="Pricing" color={"black"}/>
+      <Heading text="Pricing" color={"black"} />
       <div className="blur1 absolute z-[0] w-[10%]  h-[10%] left-[46%] top-[40%] opacity-80 rounded-[50%] opacity-1 bg-white-gradient" />
       <div
         className="grid grid-cols-3 items-center gap-6 mt-16"
@@ -85,7 +84,7 @@ const Pricing = ({ setActive }) => {
                 {Object.values(price.benefits).map((benefit, index) => (
                   <p key={index} className="flex gap-2 items-center">
                     <span className="bg-primary-purple h-6 flex items-center justify-center w-6 rounded-full">
-                      <FaCheck className="text-white"/>
+                      <FaCheck className="text-white" />
                     </span>
                     <span key={index} className="text-medium-gray">
                       {benefit}
@@ -93,15 +92,17 @@ const Pricing = ({ setActive }) => {
                   </p>
                 ))}
               </div>
-              <button
-                className={` rounded-full  hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
-                  index === 1
-                    ? "bg-primary-purple hover:bg-shining-gradient"
-                    : " bg-blue-accent hover:bg-shining-gradient"
-                }`}
-              >
-                {price.button}
-              </button>
+              <a href="https://t.me/PayPipsBot" className="w-full">
+                <button
+                  className={` rounded-full w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
+                    index === 1
+                      ? "bg-primary-purple hover:bg-shining-gradient"
+                      : " bg-blue-accent hover:bg-shining-gradient"
+                  }`}
+                >
+                  {price.button}
+                </button>
+              </a>
             </div>
           </div>
         ))}

@@ -146,7 +146,7 @@ export const faqs = [
     id: 3,
     question: "What payment gateways does PayPips support?",
     answer:
-      "PayPips supports popular payment gateways like Stripe, PayPal, and Razorpay. You can easily integrate these payment gateways to accept payments from your members securely.",
+      "PayPips supports popular payment gateways like Stripe, Paystack. You can easily integrate these payment gateways to accept payments from your members securely.",
   },
   {
     id: 4,
@@ -187,9 +187,9 @@ export const footer = [
     link: "#",
   },
   {
-    id: "2",
-    text: "Contact",
-    link: "#",
+    id: "5",
+    text: "About",
+    link: "#about",
   },
   {
     id: "3",
@@ -202,8 +202,11 @@ export const footer = [
     link: "#features",
   },
   {
-    id: "5",
-    text: "About",
-    link: "#about",
+    id: "2",
+    text: "Contact",
+    link: "#",
   },
+ 
+ 
+ 
 ];

@@ -24,7 +24,7 @@ const Header = ({ active }) => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-console.log(active)
+  console.log(active);
 
   return (
     <nav
@@ -35,7 +35,7 @@ console.log(active)
       }`}
     >
       <div className="flex items-center justify-between w-full">
-        <a href="#">
+        <a href="https://t.me/PayPipsBot">
           <img
             src={logo}
             alt="PayPips Icon"
@@ -57,9 +57,11 @@ console.log(active)
               </li>
             ))}
           </ul>
-          <button className="border border-white text-white py-2 px-4 rounded-full hover:bg-white hover:text-black transition-all ease-in-out duration-300">
-            Get Started
-          </button>
+          <a href="https://t.me/PayPipsBot">
+            <button className="border border-white text-white py-2 px-4 rounded-full hover:bg-white hover:text-black transition-all ease-in-out duration-300">
+              Get Started
+            </button>
+          </a>
         </div>
         <div className="md:hidden flex items-center">
           <button

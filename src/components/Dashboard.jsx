@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import Heading from "./Heading";
-import { FaCheck} from "react-icons/fa";
+import { FaCheck } from "react-icons/fa";
 const Dashboard = () => {
   const [showSecond, setShowSecond] = useState(false);
   useEffect(() => {
@@ -19,7 +19,7 @@ const Dashboard = () => {
   console.log(showSecond);
   return (
     <div className="bg-dark-bg mt-24 rounded-[30px] mx-16 flex-col items-center pb-32 px-12 justify-center pt-12 flex">
-       <Heading text="Paypips Dashboard" />
+      <Heading text="Paypips Dashboard" />
       <div className="flex flex-row-reverse mt-24 gap-24 text-white items-center justify-center">
         <div className="w-[50%] flex justify-center flex-col">
           <h3 className="uppercase text-blue-accent py-2">Dashboard</h3>
@@ -53,9 +53,11 @@ const Dashboard = () => {
               Support your subscribers 1-1
             </li>
           </ul>
-          <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
-            Start for free
-          </button>
+          <a href="https://t.me/PayPipsBot">
+            <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
+              Start for free
+            </button>
+          </a>
         </div>
         <div className="relative flex flex-col justify-center items-center">
           <div
@@ -88,8 +90,12 @@ const Dashboard = () => {
               Timmy Dax
             </h1>
             <div className="flex gap-4 py-2">
-            <p className="bg-blue-accent p-2 px-4 rounded-full text-lg pop-up text-white">Customer</p>
-            <p className="bg-primary-purple p-2 px-4 rounded-full text-lg pop-up   text-white">Afilliate</p>
+              <p className="bg-blue-accent p-2 px-4 rounded-full text-lg pop-up text-white">
+                Customer
+              </p>
+              <p className="bg-primary-purple p-2 px-4 rounded-full text-lg pop-up   text-white">
+                Afilliate
+              </p>
             </div>
             <p>LTV: $800</p>
             <hr className="w-full border-light-gray" />
