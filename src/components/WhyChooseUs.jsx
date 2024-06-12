@@ -37,11 +37,11 @@ const WhyChooseUs = () => {
     <section
       ref={sectionRef}
       id="why-choose-us"
-      className="bg-white py-16 text-white flex items-center flex-col justify-center relative"
+      className="bg-white py-16 pt-12 md:pt-16 text-white flex items-center flex-col justify-center relative"
     >
       <div className="blur absolute z-[0] w-[60%]  h-[60%] right-[-50%] top-[-15%] rounded-[50%] opacity-40 bg-shining-gradient" />
       <Heading text="Why Choose Paypips" color={"black"} />
-      <div className="flex flex-wrap mt-12 gap-6 px-32 items-center justify-center">
+      <div className="flex flex-wrap mt-12 gap-6 px-12 md:px-32 items-center justify-center">
         {choose.map((item) => {
           return (
             <div

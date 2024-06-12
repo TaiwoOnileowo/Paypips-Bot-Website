@@ -1,22 +1,18 @@
 import React from "react";
-import stars from "../assets/stars__bg.png";
-import telegram3d from "../assets/telegram3d.png";
+import HeroAnimation from "./HeroAnimation";
+
 const Hero = () => {
   return (
-    <section
-      id="hero"
-      className="bg-dark-bg relative gap-4 text-white pt-24 flex flex-col items-center justify-center h-[120%] text-center "
-    >
-      {/* <img src={stars} alt="" className="absolute top-0 right-0 -z-100 w-full" /> */}
-      <div className="blur absolute z-[0] w-[35%] animate-pulse h-[22%] top-[55%]  rounded-[50%] opacity-80 bg-shining-gradient" />
-      {/* <h1 className="text-4xl font-bold pop-up">
-        Manage Your Telegram Forex Community with Ease
-      </h1> */}
-      <div className="flex flex-col items-center justify-center">
-        <h1 className="text-[40px] uppercase font-[1000] pop-up ">
-          Manage Your Telegram Community with Ease
+    <section className="relative flex xsm:flex-row flex-col bg-dark-bg px-8 msm:px-16 text-white xsm:pt-0 pt-32 md:h-[120%]  xsm:h-[70vh] items-center justify-center gap-12 xsm:gap-8 md:gap-16">
+         <div className="blur absolute z-[0] w-[40%] animate-pulse h-[30%] top-[40%] -left-[3%]  rounded-[50%] opacity-80 bg-shining-gradient" />
+      <div className="flex flex-col justify-center z-[1]">
+        <h3 className="uppercase text-blue-accent text-sm md:text-base py-2">
+          Paypips
+        </h3>
+        <h1 className="text-3xl md:text-4xl font-bold pop-up">
+          Manage Your Telegram Forex Community with Ease
         </h1>
-        <p className="text-xl italic fade-in mt-0">
+        <p className="text-lg md:text-xl italic fade-in text-muted-text mt-2">
           PayPips provides powerful tools for Telegram community owners to
           streamline management and maximize engagement.
         </p>
@@ -26,11 +22,7 @@ const Hero = () => {
           </button>
         </a>
       </div>
-      <div className="w-[350px]">
-        <a href="https://t.me/PayPipsBot">
-          <img src={telegram3d} alt="" className="pop-up " />
-        </a>
-      </div>
+    <HeroAnimation/>
     </section>
   );
 };

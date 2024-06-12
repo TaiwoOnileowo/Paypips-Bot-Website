@@ -49,6 +49,44 @@ export const features = [
       "Set custom rules for member access based on their subscription levels",
   },
 ];
+export const moreFeatures = [
+  {
+    id: 1,
+    icon: "Easy Installation",
+    description:
+      "It takes only 5 minutes to start using Paypips. No coding or technical skills required.",
+  },
+  {
+    id: 2,
+    icon: "Access Codes",
+    description:
+      "With Access Codes you will accept payments manually, but membership management (adding and removing from channels/groups, reminders, etc.) will be automated.",
+  },
+  {
+    id: 3,
+    icon: "Card processing",
+    description:
+      "Accept credit and debit cards with Paystack, Stripe, Paypal and other payment gateways.",
+  },
+  {
+    id: 4,
+    icon: "Custom commands",
+    description:
+      "Supercharge your membership bot with your own commands.",
+  },
+  {
+    id: 5,
+    icon: "Flexible subscription",
+    description:
+      "From 1 day to an entire lifetime — you can create as many plans as you want.",
+  },
+  {
+    id: 6,
+    icon: "Data export (CSV)",
+    description:
+      "You can export your users, payments and subscriptions data at any time.",
+  },
+];
 
 export const pricing = [
   {
@@ -206,7 +244,4 @@ export const footer = [
     text: "Contact",
     link: "#",
   },
- 
- 
- 
 ];

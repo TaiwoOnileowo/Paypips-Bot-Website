@@ -18,7 +18,7 @@ export default {
         "blue-accent": "#3d87f5",
         "gray-background": "#f4f5f7",
         "subtle-bg": "#246763",
-        "light-blue": "e8f0fc"
+        "light-blue": "#e8f0fc",
       },
       backgroundImage: (theme) => ({
         "primary-gradient1": "linear-gradient(135deg, #246763, #5e19b3)",

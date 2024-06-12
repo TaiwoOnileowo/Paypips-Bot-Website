@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { FaCheckCircle, FaChartLine, FaUsers } from "react-icons/fa";
 import logo from "../assets/logo_purple.png";
 import Heading from "./Heading";
-import stroke from "../assets/stroke.svg";
+
 const HowItWorks = ({ setActive }) => {
   const [chatAnimation, setChatAnimation] = useState({
     first_response: false,
@@ -90,9 +90,12 @@ const HowItWorks = ({ setActive }) => {
     <section
       id="how-it-works"
       ref={sectionRef}
-      className="relative bg-white flex flex-col items-center justify-center py-16 pb-48 px-8 md:px-16 text-light-text"
+      className="relative bg-white flex flex-col items-center justify-center py-16 px-8 md:pb-48  md:px-16 text-light-text"
     >
-      <svg viewBox="0 0 1440 137" className=" absolute -top-[15%] rotateX">
+      <svg
+        viewBox="0 0 1440 137"
+        className=" absolute hidden md:block -top-[15%] rotateX"
+      >
         <path
           d="M0 137H1440V114.609H346.775C331.995 114.609 318.039 107.799 308.943 96.1501L248.278 18.4586C239.181 6.8092 225.225 0 210.445 0H0V137Z"
           fill="#fff"
@@ -100,20 +103,20 @@ const HowItWorks = ({ setActive }) => {
       </svg>
 
       <Heading text="How It Works" color="black" />
-      <div className="flex gap-10 mt-16">
+      <div className="flex md:flex-row flex-wrap  gap-10 items-center justify-center mt-16">
         <div
           onMouseEnter={initiateChatAnimation}
           className={`light-blue-gradient p-6 ${visible && "jump-in"}
-          } space-y-2 rounded-[15px] w-[380px] shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
+          } space-y-2 rounded-[15px] h-[380px] md:h-[400px] w-[300px] md:w-[380px] shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
         >
-          <p className="text-medium-gray text-lg">Step 1</p>
-          <h2 className=" text-transparent gradient-text font-bold text-3xl">
+          <p className="text-medium-gray text-base md:text-lg">Step 1</p>
+          <h2 className=" text-transparent gradient-text font-bold text-2xl md:text-3xl">
             SIGN UP
           </h2>
-          <p className="text-medium-gray text-lg mb-4">
+          <p className="text-medium-gray text-base md:text-lg mb-4">
             Launch Paypips and build your subscription bot for Telegram
           </p>
-          <div className="h-[250px] flex flex-col justify-end">
+          <div className="h-[200px] flex flex-col justify-end">
             <p className="justify-end text-[20px] flex items-center pop-in">
               <span
                 className={`justify-center py-2 px-6 rounded-full ${
@@ -154,17 +157,16 @@ const HowItWorks = ({ setActive }) => {
         </div>
         <div
           onMouseEnter={initiateMoveAnimation}
-          className={`light-blue-gradient flex flex-col gap-16 ${
+          className={`light-blue-gradient h-[380px] md:h-[400px] w-[300px] md:w-[380px] flex flex-col gap-16 ${
             visible && "jump-in"
-          }
-          } rounded-[15px] p-6 w-[380px]  space-y-2 shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
+          } rounded-[15px] p-6  space-y-2 shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
         >
           <div>
-            <p className="text-medium-gray text-lg">Step 2</p>
-            <h2 className="gradient-text text-transparent font-bold text-3xl">
+            <p className="text-medium-gray text-base md:text-lg">Step 2</p>
+            <h2 className="gradient-text text-transparent font-bold text-2xl md:text-3xl">
               INTEGRATE
             </h2>
-            <p className="text-medium-gray text-lg">
+            <p className="text-medium-gray text-base md:text-lg">
               Connect your Telegram community seamlessly.
             </p>
           </div>
@@ -174,7 +176,7 @@ const HowItWorks = ({ setActive }) => {
               fill="url(#gradient)"
               strokeWidth="0"
               viewBox="0 0 448 512"
-              className="text-5xl"
+              className="text-4xl md:text-5xl"
               height="1em"
               width="1em"
               xmlns="http://www.w3.org/2000/svg"
@@ -201,7 +203,7 @@ const HowItWorks = ({ setActive }) => {
             <img
               src={logo}
               alt="Paypips Logo"
-              className="w-12 h-12 object-contain"
+              className="md:w-12 md:h-12 w-10 h-10 object-contain"
             />
           </div>
         </div>
@@ -209,7 +211,7 @@ const HowItWorks = ({ setActive }) => {
           onMouseEnter={() => {
             setManageAnimation(true);
           }}
-          className={`light-blue-gradient  rounded-[15px] border flex flex-col gap-16 p-6 w-[380px] space-y-2 shadow-xl transition-transform transform  hover:scale-[1.02] hover:shadow-2xl ${
+          className={`light-blue-gradient  h-[380px] md:h-[400px] w-[300px] md:w-[380px] rounded-[15px] border flex flex-col gap-16 p-6 space-y-2 shadow-xl transition-transform transform  hover:scale-[1.02] hover:shadow-2xl ${
             visible && "jump-in"
           }
           }`}

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
+@import url("aos/dist/aos.css");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,6 +78,10 @@ body {
 .fade-in {
   animation: fade-in 1s ease forwards;
 }
+.fade-in-text{
+  animation: fade-in 1s ease forwards;
+  animation-timeline: view();
+}
 .gradient-text {
   background-image: linear-gradient(135deg, #5e19b3, #3d87f5);
   background-repeat: no-repeat;
@@ -122,6 +126,16 @@ body {
   animation-timeline: view();
   animation-range-start: contain -80px;
   animation-range-end: contain 10vh;
+}
+.background-transition1 {
+  background-image: linear-gradient(90deg, #262a30 0%, #14181f 100%);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  transition: 2s;
+  animation: background-transition linear forwards;
+  animation-timeline: view();
+  animation-range-start: contain ;
+  animation-range-end: contain 30vh;
 }
 
 @keyframes background-transition {
@@ -481,42 +495,27 @@ section:last-child,
   box-shadow: 0 4px 6px white;
 }
 .hr-border {
-  width: 140px;
+ 
   border: none;
   border-top: 2px dotted white;
 }
 .hr-border.bend1 {
   rotate: 30deg;
-  width: 180px;
+
 }
 .hr-border.bend2 {
   rotate: -30deg;
-  width: 180px;
+
 }
 
 .ball {
   position: absolute;
-  width: 30px;
-  height: 30px;
+ 
   background: #3d87f5;
   border-radius: 50%;
 }
-.ball.first {
-  animation: moveBall 0.5s linear;
-  opacity: 1;
-}
 
 @keyframes moveBall {
-  0% {
-    top: 46%;
-    left: 5%;
-  }
-  100% {
-    top: 46%;
-    left: 50%;
-  }
-}
-@keyframes moveBall1 {
   0% {
     top: 15%;
     left: 10%;
@@ -526,9 +525,83 @@ section:last-child,
     left: 50%;
   }
 }
+@keyframes moveBall-sm {
+  0% {
+    top: 18%;
+    left: 10%;
+  }
+  100% {
+    top: 48%;
+    left: 50%;
+  }
+}
+@keyframes moveBall-sm-md {
+  0% {
+    top: 21%;
+    left: 10%;
+  }
+  100% {
+    top: 48%;
+    left: 50%;
+  }
+}
+.ball.first {
+  animation: moveBall 0.5s linear ;
+  opacity: 1;
+}
+.ball.first-sm{
+  animation: moveBall-sm 0.5s linear;
+  opacity: 1;
+}
+.ball.first-sm-md{
+  animation: moveBall-sm-md 0.5s linear;
+  opacity: 1;
+}
+
 .ball.second {
   animation: moveBall1 0.5s linear;
   opacity: 1;
+}
+
+@keyframes moveBall1{
+  0% {
+    top: 46%;
+    left: 5%;
+  }
+  100% {
+    top: 46%;
+    left: 50%;
+  }
+}
+.ball.second-sm {
+  animation: moveBall1-sm 0.5s linear;
+  opacity: 1;
+}
+
+@keyframes moveBall1-sm{
+  0% {
+    top: 48%;
+    left: 5%;
+  }
+  100% {
+    top: 48%;
+    left: 50%;
+  }
+}
+.ball.second-sm-md {
+  animation: moveBall1-sm-md 0.5s linear;
+  opacity: 1;
+}
+
+@keyframes moveBall1-sm-md{
+  0% {
+    top: 48%;
+    left: 5%;
+  }
+  100% {
+    top: 46%;
+    left: 50%;
+  }
 }
 
 @keyframes moveBall2 {
@@ -543,6 +616,34 @@ section:last-child,
 }
 .ball.third {
   animation: moveBall2 0.5s linear;
+  opacity: 1;
+}
+@keyframes moveBall2-sm {
+  0% {
+    bottom: 18%;
+    left: 10%;
+  }
+  100% {
+    bottom: 48%;
+    left: 50%;
+  }
+}
+.ball.third-sm {
+  animation: moveBall2-sm 0.5s linear;
+  opacity: 1;
+}
+@keyframes moveBall2-sm-md {
+  0% {
+    bottom: 21%;
+    left: 10%;
+  }
+  100% {
+    bottom: 46%;
+    left: 50%;
+  }
+}
+.ball.third-sm-md {
+  animation: moveBall2-sm-md 0.5s linear;
   opacity: 1;
 }
 
@@ -592,5 +693,7 @@ section:last-child,
   }
 }
 
-
-
+.border-hero-animation{
+border: none;
+border-radius: 90px;
+}
