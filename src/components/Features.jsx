@@ -37,11 +37,10 @@ const Features = ({ setActive }) => {
       id="features"
       className="relative bg-dark-bg flex  px-24 pt-12 pb-24 flex-col items-center justify-center text-white"
     >
-      <svg viewBox="0 0 1440 137" class="absolute -top-[12%]">
+      <svg viewBox="0 0 1440 137" className="absolute -top-[12%]">
         <path
           d="M0 137H1440V114.609H346.775C331.995 114.609 318.039 107.799 308.943 96.1501L248.278 18.4586C239.181 6.8092 225.225 0 210.445 0H0V137Z"
           fill="#14181f"
-          class="dark-left-path"
         ></path>
       </svg>
       <div className="blur absolute z-[0] w-[60%]  h-[60%] right-[-50%] top-[-35%] rounded-[50%] opacity-40 bg-shining-gradient" />

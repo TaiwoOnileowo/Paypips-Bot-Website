@@ -16,7 +16,7 @@ const Dashboard = () => {
       clearTimeout(timeout2);
     };
   }, [showSecond]);
-  console.log(showSecond);
+
   return (
     <div className="bg-dark-bg mt-24 rounded-[30px] mx-16 flex-col items-center pb-32 px-12 justify-center pt-12 flex">
       <Heading text="Paypips Dashboard" />

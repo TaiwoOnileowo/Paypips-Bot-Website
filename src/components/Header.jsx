@@ -24,7 +24,7 @@ const Header = ({ active }) => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  console.log(active);
+  
 
   return (
     <nav
