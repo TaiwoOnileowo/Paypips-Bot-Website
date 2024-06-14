@@ -41,15 +41,15 @@ const WhyChooseUs = () => {
     >
       <div className="blur absolute z-[0] w-[60%]  h-[60%] right-[-50%] top-[-15%] rounded-[50%] opacity-40 bg-shining-gradient" />
       <Heading text="Why Choose Paypips" color={"black"} />
-      <div className="flex flex-wrap mt-12 gap-6 px-12 md:px-32 items-center justify-center">
+      <div className="flex flex-wrap mt-12 gap-4 xs:gap-6 px-4 xs:px-12 md:px-32 items-center justify-center">
         {choose.map((item) => {
           return (
             <div
               key={item.id}
-              className={`flex ${visible && "jump-in"} bg-dark-bg hover:scale-[1.02]  transition-all ease-out duration-300 border hover:border-gray-300 border-dark-surface px-4 rounded-full items-center justify-center gap-2 py-[10px] cursor-default1`}
+              className={`flex ${visible && "jump-in"} bg-dark-bg hover:scale-[1.02]  transition-all ease-out duration-300 border hover:border-gray-300 border-dark-surface px-2 xs:px-4 rounded-full items-center justify-center gap-2 py-[10px] cursor-default`}
             >
-              <BsStars className="text-white text-2xl" />
-              <p className="text-light-gray text-center">{item.title}</p>
+              <BsStars className="text-white xs:text-2xl text-sm" />
+              <p className="text-light-gray text-center text-sm xs:text-base">{item.title}</p>
             </div>
           );
         })}

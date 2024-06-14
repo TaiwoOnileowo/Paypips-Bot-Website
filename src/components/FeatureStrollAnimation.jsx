@@ -80,7 +80,7 @@ const FeatureStrollAnimation = () => {
   return (
     <div
       ref={chatBoxRef}
-      className="h-[550px] z-[100] xsm:w-[400px] md:w-[500px] flex flex-col justify-end bg-accent-bg chat-box p-6 rounded-lg shadow-lg mt-12"
+      className="h-[580px] msm:h-[550px] text-xs xs:text-sm z-[10] xsm:w-[400px] w-full md:w-[500px] flex flex-col justify-end bg-accent-bg chat-box p-2 xsm:p-6 rounded-lg shadow-lg xsm:mt-12"
       onMouseEnter={handleMouseEnter}
     >
       <div className="start-message message-sender ">

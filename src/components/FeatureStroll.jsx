@@ -7,7 +7,7 @@ const FeatureStroll = () => {
   return (
     <div
       id="feature-stroll"
-      className="relative bg-dark-bg flex  px-12 md:px-24 pt-12 pb-48 flex-col items-center justify-center text-white"
+      className="relative bg-dark-bg flex  px-2 xs:px-6 msm:px-12 pb-16 xsm:pb-36 pt-16 flex-col items-center justify-center text-white"
     >
       <svg viewBox="0 0 1440 137" className="hidden md:block absolute -top-[12%]">
         <path
@@ -16,14 +16,14 @@ const FeatureStroll = () => {
         ></path>
       </svg>
       <div className="blur absolute z-[0] w-[60%]  h-[60%] right-[-50%] top-[-35%] rounded-[50%] opacity-40 bg-shining-gradient" />
-      <Heading text="Interactive Feature Walkthrough" />
-      <div className="flex flex-col xsm:flex-row xsm:mt-16 items-center justify-center gap-10 md:gap-36">
-        <div className="md:w-[40%] flex justify-center items-center flex-col ">
+      <Heading text="Feature Walkthrough" />
+      <div className="flex xsm:flex-row flex-col gap-16 md:gap-32 xsm:mt-24">
+        <div className="xsm:w-[50%]  flex justify-center flex-col ">
           <h3 className="uppercase text-blue-accent py-2  text-sm md:text-base hidden md:block">Feature Stroll</h3>
-          <h1 className="text-4xl md:text-5xl font-bold py-4">
+          <h1 className="text-xl xs:text-4xl md:text-5xl font-bold py-4">
             Discover Paypips in Action
           </h1>
-          <p className="text-muted-text w-[500px] text-sm md:text-base">
+          <p className="text-muted-text text-sm md:text-base">
             Explore even more functionalities of Paypips. From sending invite
             links and broadcasting messages to supporting subscribers and
             analyzing user insights, experience the power of our platform

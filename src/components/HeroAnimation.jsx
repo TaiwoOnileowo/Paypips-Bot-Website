@@ -13,12 +13,12 @@ import avatar3 from "../assets/avatar3.jpg";
 const HeroAnimation = () => {
   return (
     <div className=" flex  items-center justify-center">
-      <div className="w-[100px] msm:w-[150px]  md:w-[180px] md:h-[350px] h-[200px] xsm:h-[234px] bg-blue-accent flex flex-col items-center justify-center rounded-[20px] p-4">
+      <div className="w-[80px] ss:w-[100px] msm:w-[120px] md:w-[180px] md:h-[350px] h-[200px] xsm:h-[234px] bg-blue-accent flex flex-col items-center justify-center rounded-[20px] p-4">
         <div className="flex gap-2 pb-8">
-          <div className="md:w-12 md:h-12 msm:w-10 msm:h-10 h-6 w-6 rounded-full bg-[#dde0ca]" />
-          <div className="flex flex-col items-center justify-center gap-2">
-            <div className="md:w-[90px] w-[35px] h-2 msm:w-[70px] msm:h-4  rounded-[20px] bg-[#dde0ca]" />
-            <div className="md:w-[90px] w-[35px] h-2 msm:w-[70px] msm:h-4  rounded-[20px] bg-[#dde0ca]" />
+          <div className="md:w-12 md:h-12 msm:w-8 msm:h-8 w-4 h-4 ss:h-6 ss:w-6 rounded-full bg-[#dde0ca]" />
+          <div className="flex flex-col items-center justify-center gap-1 ss:gap-2">
+            <div className="md:w-[90px] w-[35px] h-1 ss:h-2 msm:w-[50px] md:h-4  rounded-[20px] bg-[#dde0ca]" />
+            <div className="md:w-[90px] w-[35px] h-1 ss:h-2 msm:w-[50px] md:h-4  rounded-[20px] bg-[#dde0ca]" />
           </div>
         </div>
         <MdOutlineMessage className="text-[90px]  msm:text-[125px] md:text-[160px] text-[#dde0ca]" />
@@ -68,15 +68,15 @@ const HeroAnimation = () => {
         <h3 className="text-white text-lg">$13000</h3>
       </div>
       <hr className="w-[40px] border-2 border-muted-text" />
-      <div className="w-[100px] msm:w-[150px] md:w-[180px] md:h-[350px] h-[200px] xsm:h-[234px] bg-blue-accent flex flex-col items-center justify-center rounded-[20px] p-4">
+      <div className="w-[80px] ss:w-[100px] msm:w-[120px] md:w-[180px] md:h-[350px] h-[200px] xsm:h-[234px] bg-blue-accent flex flex-col items-center justify-center rounded-[20px] p-4">
         <div className="flex gap-2 pb-8">
-          <div className="md:w-12 md:h-12 msm:w-10 msm:h-10 h-6 w-6 rounded-full bg-[#dde0ca]" />
-          <div className="flex flex-col items-center justify-center gap-2">
-            <div className="md:w-[90px] w-[35px] h-2 msm:w-[70px] msm:h-4  rounded-[20px] bg-[#dde0ca]" />
-            <div className="md:w-[90px] w-[35px] h-2 msm:w-[70px] msm:h-4  rounded-[20px] bg-[#dde0ca]" />
+          <div className="md:w-12 md:h-12 msm:w-8 msm:h-8 w-4 h-4 ss:h-6 ss:w-6 rounded-full bg-[#dde0ca]" />
+          <div className="flex flex-col items-center justify-center gap-1 ss:gap-2">
+            <div className="md:w-[90px] w-[35px] h-1 ss:h-2 msm:w-[50px] md:h-4  rounded-[20px] bg-[#dde0ca]" />
+            <div className="md:w-[90px] w-[35px] h-1 ss:h-2 msm:w-[50px] md:h-4  rounded-[20px] bg-[#dde0ca]" />
           </div>
         </div>
-        < BiMessageDetail className="text-[90px]  msm:text-[125px] md:text-[160px] text-[#dde0ca]" />
+        < BiMessageDetail className="text-[90px]  msm:text-[120px] md:text-[160px] text-[#dde0ca]" />
         <div className="flex mt-6 justify-start w-full">
           <img
             src={avatar1}

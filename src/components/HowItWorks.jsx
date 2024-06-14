@@ -107,16 +107,16 @@ const HowItWorks = ({ setActive }) => {
         <div
           onMouseEnter={initiateChatAnimation}
           className={`light-blue-gradient p-6 ${visible && "jump-in"}
-          } space-y-2 rounded-[15px] h-[380px] md:h-[400px] w-[300px] md:w-[380px] shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
+          } xs:space-y-2 rounded-[15px] h-[180px] xs:h-[380px] md:h-[400px] w-[200px] xs:w-[300px] md:w-[380px] shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
         >
-          <p className="text-medium-gray text-base md:text-lg">Step 1</p>
-          <h2 className=" text-transparent gradient-text font-bold text-2xl md:text-3xl">
+          <p className="text-medium-gray text-sm xs:text-base md:text-lg">Step 1</p>
+          <h2 className=" text-transparent gradient-text font-bold text-xl xs:text-2xl md:text-3xl">
             SIGN UP
           </h2>
-          <p className="text-medium-gray text-base md:text-lg mb-4">
+          <p className="text-medium-gray text-sm xs:text-base md:text-lg xs:mb-4">
             Launch Paypips and build your subscription bot for Telegram
           </p>
-          <div className="h-[200px] flex flex-col justify-end">
+          <div className="h-[200px] flex-col justify-end hidden xs:flex">
             <p className="justify-end text-[20px] flex items-center pop-in">
               <span
                 className={`justify-center py-2 px-6 rounded-full ${
@@ -157,20 +157,20 @@ const HowItWorks = ({ setActive }) => {
         </div>
         <div
           onMouseEnter={initiateMoveAnimation}
-          className={`light-blue-gradient h-[380px] md:h-[400px] w-[300px] md:w-[380px] flex flex-col gap-16 ${
+          className={`light-blue-gradient h-[180px] xs:h-[380px] md:h-[400px] w-[200px] xs:w-[300px] md:w-[380px]  flex flex-col gap-16 ${
             visible && "jump-in"
           } rounded-[15px] p-6  space-y-2 shadow-xl transition-transform transform hover:scale-[1.02] hover:shadow-2xl`}
         >
           <div>
-            <p className="text-medium-gray text-base md:text-lg">Step 2</p>
-            <h2 className="gradient-text text-transparent font-bold text-2xl md:text-3xl">
+            <p className="text-medium-gray text-sm xs:text-base md:text-lg">Step 2</p>
+            <h2 className="gradient-text text-transparent font-bold text-xl xs:text-2xl md:text-3xl">
               INTEGRATE
             </h2>
-            <p className="text-medium-gray text-base md:text-lg">
+            <p className="text-medium-gray text-sm xs:text-base md:text-lg">
               Connect your Telegram community seamlessly.
             </p>
           </div>
-          <div className="relative flex items-end mt-4">
+          <div className="relative items-end mt-4 hidden xs:flex">
             <svg
               stroke="currentColor"
               fill="url(#gradient)"
@@ -211,21 +211,21 @@ const HowItWorks = ({ setActive }) => {
           onMouseEnter={() => {
             setManageAnimation(true);
           }}
-          className={`light-blue-gradient  h-[380px] md:h-[400px] w-[300px] md:w-[380px] rounded-[15px] border flex flex-col gap-16 p-6 space-y-2 shadow-xl transition-transform transform  hover:scale-[1.02] hover:shadow-2xl ${
+          className={`light-blue-gradient h-[180px] xs:h-[380px] md:h-[400px] w-[200px] xs:w-[300px] md:w-[380px]  rounded-[15px] border flex flex-col gap-16 p-6 space-y-2 shadow-xl transition-transform transform  hover:scale-[1.02] hover:shadow-2xl ${
             visible && "jump-in"
           }
           }`}
         >
           <div>
-            <p className="text-medium-gray text-lg">Step 3</p>
-            <h2 className="gradient-text text-transparent font-bold text-3xl">
+            <p className="text-medium-gray text-sm xs:text-base md:text-lg">Step 3</p>
+            <h2 className="gradient-text text-transparent font-bold text-xl xs:text-2xl md:text-3xl">
               MANAGE
             </h2>
-            <p className="text-medium-gray text-lg">
+            <p className="text-medium-gray text-sm xs:text-base md:text-lg">
               Use our tools to manage your members and content effectively.
             </p>
           </div>
-          <div className="flex items-center justify-center gap-4 mt-4">
+          <div className="items-center justify-center gap-4 mt-4 hidden xs:flex">
             <FaChartLine
               className={`text-6xl text-primary-purple ${
                 manageAnimation ? "animate-pulse" : ""

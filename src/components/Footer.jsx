@@ -8,14 +8,14 @@ const Footer = () => {
   return (
     <section
       id="footer"
-      className="relative mt-[35em] shadow_footer_yellow bg-primary-gradient  text-white w-full overflow-y-hidden footer-border  py-8 flex pt-24 flex-col items-center gap-24 justify-between"
+      className= {`${window.innerWidth > 1020 ? "footer-border" : null} relative msm:mt-[35em] shadow_footer_yellow bg-primary-gradient  text-white w-full overflow-y-hidden  py-8 flex pt-24 flex-col items-center gap-12 xsm:gap-24 justify-between`}
     >
       <div className="blur absolute z-[0] w-[60%]  h-[60%]  top-[80%] rounded-[50%] opacity-40 bg-shining-gradient" />
 
       <div className="flex flex-col items-center w-full justify-center">
         <img src={logo} alt="" className="w-20 h-20" />
 
-        <p className="pt-6 w-[300px] text-center">
+        <p className="pt-6 xs:w-[300px] text-center">
           Transform your Forex Telegram Community Management
         </p>
         <a href="https://t.me/PayPipsBot">
@@ -24,21 +24,21 @@ const Footer = () => {
           </button>
         </a>
       </div>
-      <div className="flex justify-between items-center text-white w-full px-16">
-        <ul className="flex gap-6">
+      <div className="flex justify-between xsm:flex-row flex-col-reverse gap-6 items-center text-white w-full px-16">
+        <ul className="hidden ss:flex gap-[6px] xs:gap-6">
           {footer.map((item) => (
             <li
               key={item.id}
-              className="hover:text-blue-accent z-[10] transition-all  duration-300 cursor-pointer"
+              className="hover:text-blue-accent z-[10] xs:text-base text-xs transition-all  duration-300 cursor-pointer"
             >
               <a href={item.link}>{item.text}</a>
             </li>
           ))}
         </ul>
         <div className="flex gap-6">
-          <BsInstagram className="text-2xl hover:text-blue-accent z-[10] transition-all duration-300 cursor-pointer" />
-          <FaTwitter className="text-2xl hover:text-blue-accent z-[10] transition-all duration-300 cursor-pointer" />
-          <FaTelegramPlane className="text-2xl hover:text-blue-accent z-[10] transition-all duration-300 cursor-pointer" />
+          <BsInstagram className="xs:text-2xl text-base hover:text-blue-accent z-[10] transition-all duration-300 cursor-pointer" />
+          <FaTwitter className="xs:text-2xl text-base hover:text-blue-accent z-[10] transition-all duration-300 cursor-pointer" />
+          <FaTelegramPlane className="xs:text-2xl text-base hover:text-blue-accent z-[10] transition-all duration-300 cursor-pointer" />
         </div>
       </div>
     </section>

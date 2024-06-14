@@ -28,7 +28,7 @@ const Features = ({ setActive }) => {
       </svg>
       <div className="blur absolute z-[0] w-[60%]  h-[60%] right-[-50%] top-[-35%] rounded-[50%] opacity-40 bg-shining-gradient" />
       <Heading text="Features" />
-      <div className="flex mt-16 md:mt-24 gap-16 w-full px-8 xsm:px-24">
+      <div className="flex mt-16 md:mt-24 gap-16 w-full xs:px-8 xsm:px-24">
         <div className="w-[40%] hidden md:flex justify-center flex-col">
           <h3 className="uppercase text-blue-accent py-2">Our Hallmarks</h3>
           <h1 className="text-5xl font-bold py-4">
@@ -57,10 +57,10 @@ const Features = ({ setActive }) => {
         <MoreFeatures setShowMoreFeatures={setShowMoreFeatures} />
       ) : (
         <div
-          className="my-8 py-8 background-transition1 w-full cursor-pointer flex items-center justify-center"
+          className="my-8 py-4 xs:py-8 background-transition1 w-full cursor-pointer flex items-center justify-center"
           onClick={() => setShowMoreFeatures(true)}
         >
-          <h2 className="text-2xl inline-flex fade-in-text cursor-pointer z-[1] items-center gap-2 ">
+          <h2 className="text-base xs:text-2xl inline-flex fade-in-text cursor-pointer z-[1] items-center gap-2 ">
             View More Features <FaChevronDown />
           </h2>
         </div>

@@ -6,24 +6,22 @@ const DashboardAnimation = () => {
   useEffect(() => {
     const timeout1 = setTimeout(() => {
       setShowSecond(true);
-    }, 4000);
+    }, 2000);
     const timeout2 = setTimeout(() => {
       setShowSecond(false);
-    }, 8000);
+    }, 4000);
     return () => {
       clearTimeout(timeout1);
       clearTimeout(timeout2);
     };
   }, [showSecond]);
   return (
-    <div className="relative flex flex-col justify-center items-center">
+    <div className="relative flex flex-col w-full xsm:w-[50%] justify-center items-center">
       <div
-        className={`fade-in  ${
-          showSecond ? "hidden" : "flex"
-        } justify-center items-center p-6 flex-col bg-muted-text w-[300px] md:w-[400px] gap-4 h-[250px] rounded-[15px]`}
+        className={`fade-in justify-center  ${showSecond ? "hidden" : "flex"} items-center p-6 flex-col bg-muted-text w-full  h-[180px] xs:w-[300px] md:w-[400px] gap-4 xs:h-[250px] rounded-[15px]`}
       >
         <div>
-          <h1 className="inline-flex gap-2 text-medium-gray text-xl md:text-2xl items-center">
+          <h1 className="inline-flex gap-2 text-medium-gray text-sm xs:text-xl md:text-2xl items-center">
             Volume From Sales{" "}
             <span className="bg-primary-purple text-white p-2 rounded-[15px]">
               +30%
@@ -38,19 +36,17 @@ const DashboardAnimation = () => {
         </div>
       </div>
       <div
-        className={`flex text-xl md:text-2xl fade-in p-6 text-medium-gray flex-col  bg-muted-text w-[300px] md:w-[400px] gap-2 h-[250px] rounded-[15px] ${
-          showSecond ? "flex" : "hidden"
-        }`}
+        className={`text-sm xs:text-xl md:text-2xl w-full ${showSecond ? "flex" : "hidden"}  fade-in p-6 text-medium-gray flex-col  bg-muted-text  h-[180px] xs:w-[300px] md:w-[400px] gap-2 xs:h-[250px] rounded-[15px] `}
       >
         <h1 className="  inline-flex items-center gap-2">
           <FaUserCircle />
           Timmy Dax
         </h1>
-        <div className="flex gap-4 py-2">
-          <p className="bg-blue-accent p-2 px-4 rounded-full text-lg pop-up text-white">
+        <div className="flex gap-2 xs:gap-4  py-2 w-full items-center justify-center">
+          <p className="bg-blue-accent px-2 xs:px-4 rounded-full text-base xs:text-lg pop-up text-white">
             Customer
           </p>
-          <p className="bg-primary-purple p-2 px-4 rounded-full text-lg pop-up   text-white">
+          <p className="bg-primary-purple px-2 xs:px-4 rounded-full text-base xs:text-lg pop-up   text-white">
             Afilliate
           </p>
         </div>

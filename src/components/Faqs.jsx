@@ -7,10 +7,10 @@ const Faqs = () => {
   return (
     <section
       id="faqs"
-      className="bg-dark-bg flex p-24 absolute pb-4 pt-16 z-[1] top-[32.5%] w-[800px] md:w-[1200px] right-[10%] md:right-[5%]  shadow shadow-black rounded-[35px] justify-center items-center flex-col "
+      className="bg-dark-bg flex p-4 xs:p-8 msm:absolute pb-4 pt-16 z-[1] msm:top-[32%] w-full xsm:w-[800px] md:w-[1200px] msm:right-[10%] md:right-[5%]  shadow shadow-black msm:rounded-[35px] justify-center items-center flex-col "
     >
       <Heading text="Frequently Asked Questions" />
-      <div className="mt-24 w-full flex flex-col items-start">
+      <div className="mt-12 xsm:mt-24 flex flex-col w-full items-start">
         {faqs.map((faq) => {
           const { id, question, answer } = faq;
           return (
@@ -26,11 +26,11 @@ const Faqs = () => {
                 setIndex(id);
               }}
             >
-              <h1 className="title">
+              <h1 className="title text-[0.6rem] xs:text-[1rem] xsm:text-[1.25rem]">
                 <span>{question}</span>
               </h1>
-              <div className="content">
-                <div className="wrapper w-[600px]">
+              <div className="content text-[0.6rem] xs:text-[1rem] xsm:text-[1.25rem]">
+                <div className="wrapper w-[90%]">
                   <p>{answer}</p>
                 </div>
               </div>

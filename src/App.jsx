@@ -12,6 +12,7 @@ import FeatureStroll from "./components/FeatureStroll";
 import Footer from "./components/Footer";
 import Payments from "./components/Payments";
 import Dashboard from "./components/Dashboard";
+import PricingResponsive from "./components/PricingResponsive";
 
 
 // import Test from './components/Test'
@@ -30,6 +31,7 @@ const App = () => {
       <Payments />
       <Dashboard />
       <Pricing setActive={setActive} />
+      <PricingResponsive/>
       <FeatureStroll />
       <div className="relative w-full">
         <CTA />

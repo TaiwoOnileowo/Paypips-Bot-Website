@@ -33,18 +33,18 @@ const FeaturesList = ({setActive, setVisible, visible}) => {
     }, []);
   return (
     <div
-      className="md:w-[60%] grid xsm:grid-cols-2 gap-8 p-6"
+      className="md:w-[60%] grid xsm:grid-cols-2 gap-8 p-4 xs:p-6"
       ref={sectionRef}
     >
       {features.map((feature, index) => (
         <div
           key={feature.id}
           className={`shadow_purple ${
-            index === 1 && visible ? "bent-div" : "shine"
-          } hover:border hover:border-gray-300 rounded-[15px] p-6 bg-dark-bg flex item-center justify-center gap-6 flex-col`}
+            (index === 1 && visible)  && window.innerWidth > 1020 ? "bent-div" : "shine"
+          } hover:border hover:border-gray-300 rounded-[15px] p-4 xs:p-6 bg-dark-bg flex item-center justify-center gap-2 xs:gap-6 flex-col`}
         >
-          <span className="text-blue-accent text-6xl ">{feature.icon}</span>
-          <p className="text-lg">{feature.description}</p>
+          <span className="text-blue-accent text-3xl xs:text-6xl ">{feature.icon}</span>
+          <p className="text-sm xs:text-lg">{feature.description}</p>
         </div>
       ))}
     </div>

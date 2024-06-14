@@ -4,6 +4,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -310,7 +315,6 @@ section > h1 {
   margin-bottom: 1rem;
   border-radius: min(8px, 0.5rem);
   position: relative;
-
   display: grid;
   grid-template-rows: 0fr 0fr;
   transition-timing-function: var(--slide-ease);
@@ -343,7 +347,7 @@ section > h1 {
 }
 
 .content {
-  font-size: var(--size-accordion-content);
+  /* font-size: var(--size-accordion-content); */
   line-height: 140%;
 }
 
@@ -358,7 +362,7 @@ section:last-child,
 
 .title span {
   padding: 1rem 1.25rem;
-  font-size: var(--size-accordion-title);
+  /* font-size: var(--size-accordion-title); */
   font-weight: 800;
   color: currentColor;
   text-decoration: none;
@@ -446,7 +450,7 @@ section:last-child,
 }
 
 .chat-box {
-  padding: 1.5rem;
+  /* padding: 1.5rem; */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -456,7 +460,6 @@ section:last-child,
   padding: 0.5rem 1rem;
   border-radius: 20px;
   display: none;
-  font-size: 14px;
 }
 
 .start-message {
@@ -697,3 +700,9 @@ section:last-child,
 border: none;
 border-radius: 90px;
 }
+
+.carousel-item {
+  flex: 0 0 100%;
+}
+
+
