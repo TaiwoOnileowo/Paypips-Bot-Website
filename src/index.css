@@ -530,7 +530,17 @@ section:last-child,
 }
 @keyframes moveBall-sm {
   0% {
-    top: 18%;
+    top: 22%;
+    left: 10%;
+  }
+  100% {
+    top: 42%;
+    left: 50%;
+  }
+}
+@keyframes moveBall-sm-md {
+  0% {
+    top: 21%;
     left: 10%;
   }
   100% {
@@ -538,7 +548,7 @@ section:last-child,
     left: 50%;
   }
 }
-@keyframes moveBall-sm-md {
+@keyframes moveBall-sm-xs {
   0% {
     top: 21%;
     left: 10%;
@@ -558,6 +568,10 @@ section:last-child,
 }
 .ball.first-sm-md{
   animation: moveBall-sm-md 0.5s linear;
+  opacity: 1;
+}
+.ball.first-sm-xs{
+  animation: moveBall-sm-xs 0.5s linear;
   opacity: 1;
 }
 
@@ -623,11 +637,11 @@ section:last-child,
 }
 @keyframes moveBall2-sm {
   0% {
-    bottom: 18%;
+    bottom: 22%;
     left: 10%;
   }
   100% {
-    bottom: 48%;
+    bottom: 42%;
     left: 50%;
   }
 }
