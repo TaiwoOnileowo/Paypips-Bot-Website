@@ -31,7 +31,7 @@ const App = () => {
       <Payments />
       <Dashboard />
       <Pricing setActive={setActive} />
-      <PricingResponsive/>
+      <PricingResponsive setActive={setActive}/>
       <FeatureStroll />
       <div className="relative w-full">
         <CTA />

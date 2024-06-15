@@ -19,24 +19,53 @@ const PricingResponsive = ({ setActive }) => {
 
   const handleTouchEnd = () => {
     if (touchStartX.current - touchEndX.current > 50) {
-      setIndex((prevIndex) => (prevIndex < pricing.length - 1 ? prevIndex + 1 : prevIndex));
+      setIndex((prevIndex) =>
+        prevIndex < pricing.length - 1 ? prevIndex + 1 : prevIndex
+      );
     }
 
     if (touchStartX.current - touchEndX.current < -50) {
       setIndex((prevIndex) => (prevIndex > 0 ? prevIndex - 1 : prevIndex));
     }
   };
+  const sectionRef = useRef(null);
+  useEffect(() => {
+    const handleIntersection = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActive("pricing2");
+        } else {
+          setActive("");
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(handleIntersection, {
+      threshold: 0.05,
+    });
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
 
   return (
     <section
-      id="pricing"
+    ref={sectionRef}
+      id="pricing2"
       className="relative  bg-white pt-12 pb-24 md:pb-48 flex md:hidden flex-col justify-center items-center"
     >
       <Heading text="Pricing" color={"black"} />
       <div className="blur1 absolute z-[0] w-[10%] h-[10%] left-[46%] top-[40%] opacity-80 rounded-[50%] bg-white-gradient" />
       <div
         className="flex mt-16 w-full transition-transform ease-out duration-300"
-        style={{ transform: `translateX(-${ index * 100}%)` }}
+        style={{ transform: `translateX(-${index * 100}%)` }}
         onTouchStart={handleTouchStart}
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
@@ -45,12 +74,17 @@ const PricingResponsive = ({ setActive }) => {
           <div
             key={price.id}
             className="carousel-item w-full flex justify-center items-center"
+            id="pricing"
           >
-            <div className="p-2 flex w-[90%] flex-col xs:p-4 transition-transform ease-out duration-300 border cursor-default shadow-2xl rounded-[15px] justify-center light-blue-gradient">
+            <div className="p-2 flex  flex-col  xs:p-4 transition-transform ease-out duration-300 border cursor-default shadow-2xl rounded-[15px] justify-center light-blue-gradient">
               <div className="flex justify-between mt-2 xs:mt-0">
-                <h1 className="text-xs xs:text-sm text-medium-gray">{price.name}</h1>
+                <h1 className="text-xs xs:text-sm text-medium-gray">
+                  {price.name}
+                </h1>
                 <h1
-                  className={`text-xs xs:text-sm py-1 xs:py-2 -mt-2 px-4 text-white ${index === 1 ? "block" : "hidden"} bg-blue-accent transition-all ease-out duration-300 rounded-full hover:scale-[1.02]`}
+                  className={`text-xs xs:text-sm py-1 xs:py-2 -mt-2 px-4 text-white ${
+                    index === 1 ? "block" : "hidden"
+                  } bg-blue-accent transition-all ease-out duration-300 rounded-full hover:scale-[1.02]`}
                 >
                   Most Popular
                 </h1>
@@ -80,7 +114,9 @@ const PricingResponsive = ({ setActive }) => {
                     </p>
                   ))}
                 </div>
-                <p className="text-medium-gray my-6 text-xs xs:text-sm">{price.text}</p>
+                <p className="text-medium-gray my-6 w-[188px] text-xs xs:text-sm">
+                  {price.text}
+                </p>
                 <a href="https://t.me/PayPipsBot" className="xs:w-full">
                   <button
                     className={`rounded-full text-sm xs:text-base w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
@@ -101,7 +137,9 @@ const PricingResponsive = ({ setActive }) => {
         {pricing.map((_, i) => (
           <div
             key={i}
-            className={`w-2 h-2 rounded-full ${i === index ? "bg-black" : "bg-medium-gray"} cursor-pointer`}
+            className={`w-2 h-2 rounded-full ${
+              i === index ? "bg-black" : "bg-medium-gray"
+            } cursor-pointer`}
             onClick={() => setIndex(i)}
           />
         ))}

@@ -18,7 +18,7 @@ export const navLinks = [
   },
   {
     name: "Pricing",
-    href: "pricing",
+    href: window.innerWidth > 1200 ? "pricing" : "pricing2",
   },
 ];
 

@@ -24,7 +24,6 @@ const Header = ({ active }) => {
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
   };
-  
 
   return (
     <nav
@@ -65,7 +64,7 @@ const Header = ({ active }) => {
         </div>
         <div className="md:hidden flex items-center">
           <button
-            className="text-2xl text-white focus:outline-none"
+            className="text-2xl   text-white focus:outline-none"
             onClick={toggleMenu}
           >
             {menuOpen ? (
@@ -77,19 +76,17 @@ const Header = ({ active }) => {
         </div>
       </div>
       <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-50 transition-transform transform ${
-          menuOpen ? "translate-x-0 opacity-100" : "translate-x-full opacity-0"
-        } md:hidden flex flex-col items-center justify-center space-y-6`}
+        className={`fixed right-0 transition-opacity transform ${
+          menuOpen ? " opacity-100" : " opacity-0"
+        } md:hidden flex flex-col bg-primary-purple bg-opacity-50 p-6 rounded-[20px] items-center justify-center space-y-6`}
       >
         <ul className="flex flex-col items-center justify-center gap-6">
           {navLinks.map((link, index) => (
-            <li key={index} className="text-2xl">
+            <li key={index} className="text-sm xs:text-lg">
               <a
-                href={link.href}
+                href={`#${link.href}`}
                 className={`hover:text-highlight transition duration-300 ${
-                  active === link.name.toLowerCase()
-                    ? "gradient-text"
-                    : "text-white"
+                  active === link.href ? "text-blue-accent" : "text-white"
                 } ${menuOpen ? "animate-fade-in" : "animate-fade-out"}`}
               >
                 {link.name}
@@ -97,8 +94,8 @@ const Header = ({ active }) => {
             </li>
           ))}
         </ul>
-        <button className="hover:bg-gradient-to-r hover:bg-opacity-10 hover:from-turquoise hover:to-blue bg-gradient-to-r from-blue to-turquoise text-white py-2 px-4 rounded-full transition-all ease-in-out duration-300">
-          Download
+        <button className="border border-white hover:bg-blue-accent text-white py-2 px-2 text-sm xs:text-base xs:px-4 rounded-full transition-all ease-in-out duration-300">
+          Get Started
         </button>
       </div>
     </nav>
