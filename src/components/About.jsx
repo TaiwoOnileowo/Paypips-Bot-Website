@@ -45,23 +45,7 @@ const About = ({ setActive }) => {
             goals.
           </p>
         </div>
-        {/* <div className="flex mt-24 flex-col md:flex-row items-center justify-around">
-          <img
-            src="path-to-team-image1"
-            alt="Team Image 1"
-            className="w-48 h-48 rounded-full mb-6 md:mb-0"
-          />
-          <img
-            src="path-to-team-image2"
-            alt="Team Image 2"
-            className="w-48 h-48 rounded-full mb-6 md:mb-0"
-          />
-          <img
-            src="path-to-team-image3"
-            alt="Team Image 3"
-            className="w-48 h-48 rounded-full"
-          />
-        </div> */}
+       
       </div>
     </section>
   );

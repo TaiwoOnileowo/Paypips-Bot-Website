@@ -14,7 +14,6 @@ import Payments from "./components/Payments";
 import Dashboard from "./components/Dashboard";
 import PricingResponsive from "./components/PricingResponsive";
 
-
 // import Test from './components/Test'
 const App = () => {
   const [active, setActive] = useState();
@@ -22,7 +21,7 @@ const App = () => {
     <div className="bg-white overflow-x-hidden h-screen">
       <Header active={active} />
       <Hero />
-   
+
       <About setActive={setActive} />
       <HowItWorks setActive={setActive} />
       {/* <Test/> */}
@@ -31,13 +30,12 @@ const App = () => {
       <Payments />
       <Dashboard />
       <Pricing setActive={setActive} />
-      <PricingResponsive setActive={setActive}/>
+      <PricingResponsive setActive={setActive} />
       <FeatureStroll />
-      <div className="relative w-full">
-        <CTA />
-        <Faqs />
-        <Footer />
-      </div>
+
+      <CTA />
+      <Faqs />
+      <Footer />
     </div>
   );
 };

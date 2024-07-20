@@ -8,7 +8,7 @@
 //     N: "",
 //     P: "",
 //   };
- className="h-[100px] z-[100] w-[500px] scrollbar flex flex-col justify-end bg-black chat-box p-6 rounded-lg shadow-lg mt-12"
+
 //   const makeChange = (amount) => {
 //     if (amount >= 50) {
 //     const H = 50;
