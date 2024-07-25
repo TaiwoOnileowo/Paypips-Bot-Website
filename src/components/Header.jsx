@@ -34,7 +34,7 @@ const Header = ({ active }) => {
       }`}
     >
       <div className="flex items-center justify-between w-full">
-        <a href="https://t.me/PayPipsBot">
+        <a href="https://t.me/paypips_adminBot">
           <img
             src={logo}
             alt="PayPips Icon"

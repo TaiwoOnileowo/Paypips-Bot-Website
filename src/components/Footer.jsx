@@ -18,7 +18,7 @@ const Footer = () => {
         <p className="pt-6 xs:w-[300px] text-center">
           Transform your Forex Telegram Community Management
         </p>
-        <a href="https://t.me/PayPipsBot">
+        <a href="https://t.me/paypips_adminBot">
           <button className="w-[150px] bg-shining-gradient text-white mr-6 py-[10px] mt-8 shadow_yellow rounded-full px-4">
             Get Started
           </button>

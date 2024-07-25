@@ -43,7 +43,7 @@ const Payments = () => {
               Add free trials
             </li>
           </ul>
-          <a href="https://t.me/PayPipsBot">
+          <a href="https://t.me/paypips_adminBot">
             <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
               Get Started
             </button>

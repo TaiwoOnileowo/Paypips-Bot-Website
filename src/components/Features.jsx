@@ -40,7 +40,7 @@ const Features = ({ setActive }) => {
             member management tools, we provide everything you need to
             effectively engage and grow your community.
           </p>
-          <a href="https://t.me/PayPipsBot">
+          <a href="https://t.me/paypips_adminBot">
             <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
               Start for free
             </button>

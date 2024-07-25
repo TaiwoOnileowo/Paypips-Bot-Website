@@ -29,7 +29,7 @@ const FeatureStroll = () => {
             analyzing user insights, experience the power of our platform
             firsthand.
           </p>
-          <a href="https://t.me/PayPipsBot">
+          <a href="https://t.me/paypips_adminBot">
             <button className="w-[150px]  bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
               Start Exploring
             </button>

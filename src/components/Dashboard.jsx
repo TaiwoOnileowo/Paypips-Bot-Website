@@ -34,7 +34,7 @@ const Dashboard = () => {
               Support your subscribers 1-1
             </li>
           </ul>
-          <a href="https://t.me/PayPipsBot">
+          <a href="https://t.me/paypips_adminBot">
             <button className="w-[150px] bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
               Start for free
             </button>

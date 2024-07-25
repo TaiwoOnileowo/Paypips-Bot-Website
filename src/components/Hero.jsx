@@ -16,7 +16,7 @@ const Hero = () => {
           PayPips provides powerful tools for Telegram community owners to
           streamline management and maximize engagement.
         </p>
-        <a href="https://t.me/PayPipsBot">
+        <a href="https://t.me/paypips_adminBot">
           <button className="bg-blue-accent mt-10  text-white z-[100] cursor-pointer hover:bg-shining-gradient hover:scale-[1.02] transition-all ease-in-out duration-300 text-lg font-bold w-[200px] py-3 rounded-md">
             Get Started
           </button>

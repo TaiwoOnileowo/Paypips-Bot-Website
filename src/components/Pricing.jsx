@@ -94,7 +94,7 @@ const Pricing = ({ setActive }) => {
                 ))}
               </div>
               <p className="text-medium-gray my-6 text-sm">{price.text}</p>
-              <a href="https://t.me/PayPipsBot" className="w-full">
+              <a href="https://t.me/paypips_adminBot" className="w-full">
                 <button
                   className={` rounded-full w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
                     index === 1
