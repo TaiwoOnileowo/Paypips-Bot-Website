@@ -93,22 +93,22 @@ const PricingResponsive = ({ setActive }) => {
                 ${price.amount}
                 <span className="text-sm text-medium-gray">/month</span>
               </h2>
-              <p className="text-xs xs:text-sm inline-flex items-center gap-2 w-[80%] text-white bg-blue-accent p-2 rounded-full justify-center">
+              <p className="text-xs xs:text-sm inline-flex items-center gap-2 w-[90%] text-white bg-blue-accent p-2 rounded-full justify-center">
                 {price.transaction_fee}% transaction fee <FaInfoCircle />
               </p>
               <div className="flex mt-4 items-center gap-2">
-                <div className="w-[1px] h-[2px] bg-blue-accent rounded-full" />
-                <hr className="border-blue-accent opacity-50 w-[50px]" />
+                <div className="w-[3px] h-[3px] bg-blue-accent rounded-full" />
+                <hr className="border-blue-accent opacity-50 w-[100px]" />
                 <p className="text-xs xs:text-sm text-medium-gray">Features</p>
-                <hr className="border-medium-gray opacity-50 w-[50px]" />
-                <div className="w-[1px] h-[2px] bg-blue-accent rounded-full" />
+                <hr className="border-medium-gray opacity-50 w-[100px]" />
+                <div className="w-[3px] h-[3px] bg-blue-accent rounded-full" />
               </div>
               <div className="flex flex-col mt-4 justify-between gap-0">
                 <div className="flex gap-2 flex-col text-xs xs:text-base">
                   {Object.values(price.benefits).map((benefit, index) => (
-                    <p key={index} className="flex gap-2 items-center">
-                      <span className="bg-primary-purple xs:h-6 flex items-center justify-center xs:w-6 rounded-full">
-                        <FaCheck className="text-white" />
+                    <p key={index} className="flex gap-2 text-xs sm:text-sm items-center">
+                      <span className="bg-primary-purple xs:h-4 sm:h-6 sm:w-6 flex items-center justify-center xs:w-4 rounded-full">
+                        <FaCheck className="text-white text-xs" />
                       </span>
                       <span className="text-medium-gray">{benefit}</span>
                     </p>
@@ -119,7 +119,7 @@ const PricingResponsive = ({ setActive }) => {
                 </p>
                 <a href="https://t.me/PayPipsBot" className="xs:w-full">
                   <button
-                    className={`rounded-full text-sm xs:text-base w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
+                    className={`rounded-full text-sm sm:text-base w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
                       index === 1
                         ? "bg-primary-purple hover:bg-shining-gradient"
                         : "bg-blue-accent hover:bg-shining-gradient"

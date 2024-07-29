@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect } from "react";
 import { pricing } from "../data";
 import Heading from "./Heading";
 import { FaCheck } from "react-icons/fa6";
@@ -72,20 +72,22 @@ const Pricing = ({ setActive }) => {
               ${price.amount}
               <span className="text-sm text-medium-gray">/month</span>
             </h2>
-            <p className="text-text-medium-gray text-sm inline-flex items-center gap-2 w-[80%] text-white bg-blue-accent p-2 rounded-full justify-center">{price.transaction_fee}% transaction fee <FaInfoCircle/></p>
+            <p className="text-text-medium-gray text-sm inline-flex items-center gap-2 w-[90%] text-white bg-blue-accent p-2 rounded-full justify-center">
+              {price.transaction_fee}% transaction fee <FaInfoCircle />
+            </p>
             <div className="flex mt-4 items-center gap-2">
-              <div className="w-[2px] h-[2px] bg-blue-accent rounded-full" />
-              <hr className="border-blue-accent  opacity-50 w-[80px]" />
+              <div className="w-[4px] h-[4px] bg-blue-accent rounded-full" />
+              <hr className="border-blue-accent  opacity-50 w-[120px]" />
               <p className="text-sm text-medium-gray">Features</p>
-              <hr className="border-medium-gray opacity-50 w-[80px]" />
-              <div className="w-[2px] h-[2px] bg-blue-accent rounded-full" />
+              <hr className="border-medium-gray opacity-50 w-[120px]" />
+              <div className="w-[4px] h-[4px] bg-blue-accent rounded-full" />
             </div>
             <div className="flex flex-col mt-4 h-[300px] justify-between gap-4">
               <div className="flex gap-2  flex-col">
                 {Object.values(price.benefits).map((benefit, index) => (
-                  <p key={index} className="flex gap-2 items-center">
-                    <span className="bg-primary-purple h-6 flex items-center justify-center w-6 rounded-full">
-                      <FaCheck className="text-white" />
+                  <p key={index} className="flex gap-2 text-sm items-center">
+                    <span className="bg-primary-purple h-4 flex items-center justify-center w-4 rounded-full">
+                      <FaCheck className="text-white text-xs" />
                     </span>
                     <span key={index} className="text-medium-gray">
                       {benefit}
@@ -93,7 +95,7 @@ const Pricing = ({ setActive }) => {
                   </p>
                 ))}
               </div>
-              <p className="text-medium-gray my-6 text-sm">{price.text}</p>
+
               <a href="https://t.me/paypips_adminBot" className="w-full">
                 <button
                   className={` rounded-full w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
