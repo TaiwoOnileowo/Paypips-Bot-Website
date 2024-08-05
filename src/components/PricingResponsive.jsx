@@ -4,8 +4,7 @@ import Heading from "./Heading";
 import { FaCheck } from "react-icons/fa6";
 import { FaInfoCircle } from "react-icons/fa";
 
-const PricingResponsive = ({ setActive }) => {
-  const [index, setIndex] = useState(0);
+const PricingResponsive = ({ setActive, setIndex, index }) => {
   const touchStartX = useRef(null);
   const touchEndX = useRef(null);
 
@@ -33,7 +32,7 @@ const PricingResponsive = ({ setActive }) => {
     const handleIntersection = (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setActive("pricing2");
+          setActive("pricing");
         } else {
           setActive("");
         }
@@ -41,7 +40,7 @@ const PricingResponsive = ({ setActive }) => {
     };
 
     const observer = new IntersectionObserver(handleIntersection, {
-      threshold: 0.05,
+      threshold: 0.5,
     });
 
     if (sectionRef.current) {
@@ -57,8 +56,8 @@ const PricingResponsive = ({ setActive }) => {
 
   return (
     <section
-    ref={sectionRef}
-      id="pricing2"
+      ref={sectionRef}
+      id="pricing1"
       className="relative  bg-white pt-12 pb-24 md:pb-48 flex md:hidden flex-col justify-center items-center"
     >
       <Heading text="Pricing" color={"black"} />
@@ -70,32 +69,36 @@ const PricingResponsive = ({ setActive }) => {
         onTouchMove={handleTouchMove}
         onTouchEnd={handleTouchEnd}
       >
-        {pricing.map((price) => (
+        {pricing.map((price, i) => (
           <div
             key={price.id}
             className="carousel-item w-full flex justify-center items-center"
-            id="pricing"
           >
-            <div className="p-2 flex  flex-col  xs:p-4 transition-transform ease-out duration-300 border cursor-default shadow-2xl rounded-[15px] justify-center light-blue-gradient">
-              <div className="flex justify-between mt-2 xs:mt-0">
-                <h1 className="text-xs xs:text-sm text-medium-gray">
-                  {price.name}
-                </h1>
-                <h1
-                  className={`text-xs xs:text-sm py-1 xs:py-2 -mt-2 px-4 text-white ${
-                    index === 1 ? "block" : "hidden"
-                  } bg-blue-accent transition-all ease-out duration-300 rounded-full hover:scale-[1.02]`}
+            <div
+              className={`p-2 flex w-[300px] min-h-[440px] py-6  text-medium-gray flex-col  xs:p-4 transition-transform ease-out duration-300 cursor-default shadow-2xl rounded-[15px] light-blue-gradient ${
+                i === index
+                  ? "border-blue-accent border-2 shadow-2xl"
+                  : "border-none shadow-xl"
+              }`}
+            >
+              <div className="flex justify-between">
+                <h1 className="">{price.name}</h1>
+                <div
+                  className={`w-6 h-6   rounded-full flex items-center justify-center ${
+                    i === index ? "bg-blue-accent" : "bg-white"
+                  }`}
                 >
-                  Most Popular
-                </h1>
+                  {i === index && <FaCheck className=" text-xs text-white " />}
+                </div>
               </div>
-              <h2 className="text-2xl text-primary-purple font-bold py-4">
+              <h2 className="text-2xl text-blue-accent font-bold py-4">
                 ${price.amount}
                 <span className="text-sm text-medium-gray">/month</span>
               </h2>
-              <p className="text-xs xs:text-sm inline-flex items-center gap-2 w-[90%] text-white bg-blue-accent p-2 rounded-full justify-center">
+              <p className="text-xs  text-wrap">{price.text} </p>
+              {/* <p className="text-xs xs:text-sm inline-flex items-center gap-2 w-[90%] text-white bg-blue-accent p-2 rounded-full justify-center">
                 {price.transaction_fee}% transaction fee <FaInfoCircle />
-              </p>
+              </p> */}
               <div className="flex mt-4 items-center gap-2">
                 <div className="w-[3px] h-[3px] bg-blue-accent rounded-full" />
                 <hr className="border-blue-accent opacity-50 w-[100px]" />
@@ -106,28 +109,31 @@ const PricingResponsive = ({ setActive }) => {
               <div className="flex flex-col mt-4 justify-between gap-0">
                 <div className="flex gap-2 flex-col text-xs xs:text-base">
                   {Object.values(price.benefits).map((benefit, index) => (
-                    <p key={index} className="flex gap-2 text-xs sm:text-sm items-center">
-                      <span className="bg-primary-purple xs:h-4 sm:h-6 sm:w-6 flex items-center justify-center xs:w-4 rounded-full">
+                    <p
+                      key={index}
+                      className="flex gap-2 text-xs  items-center"
+                    >
+                      <span className="bg-blue-accent xs:h-4 p-1 flex items-center justify-center xs:w-4 rounded-full">
                         <FaCheck className="text-white text-xs" />
                       </span>
                       <span className="text-medium-gray">{benefit}</span>
                     </p>
                   ))}
                 </div>
-                <p className="text-medium-gray my-6 w-[188px] text-xs xs:text-sm">
+                {/* <p className="text-medium-gray my-6 w-[188px] text-xs xs:text-sm">
                   {price.text}
-                </p>
-                <a href="https://t.me/PayPipsBot" className="xs:w-full">
+                </p> */}
+                {/* <a href="https://t.me/PayPipsBot" className="xs:w-full">
                   <button
                     className={`rounded-full text-sm sm:text-base w-full hover:scale-[1.02] transition-all ease-out duration-300 text-white shadow-2xl py-2 ${
                       index === 1
-                        ? "bg-primary-purple hover:bg-shining-gradient"
+                        ? "bg-blue-accent hover:bg-shining-gradient"
                         : "bg-blue-accent hover:bg-shining-gradient"
                     }`}
                   >
                     {price.button}
                   </button>
-                </a>
+                </a> */}
               </div>
             </div>
           </div>

@@ -7,7 +7,7 @@ const Faqs = () => {
   return (
     <section
       id="faqs"
-      className="bg-dark-bg flex p-4 xs:p-8 pb-4 pt-16 z-[1] my-12 w-full xsm:w-[800px] md:w-[1200px]  mx-auto shadow shadow-black msm:rounded-[35px] justify-center items-center flex-col "
+      className="bg-dark-bg flex p-4 xs:p-8 pb-4 pt-16 z-[1] my-12 w-full  md:w-[1200px]   mx-auto shadow shadow-black msm:rounded-[35px] justify-center items-center flex-col "
     >
       <Heading text="Frequently Asked Questions" />
       <div className="mt-12 xsm:mt-24 flex flex-col w-full items-start">

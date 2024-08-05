@@ -4,7 +4,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -54,6 +54,17 @@ body {
     opacity: 1;
   }
 }
+.come-up {
+  animation: come-up 1s ease forwards;
+  transform: translateY(80px);
+  opacity: 0;
+}
+@keyframes come-up {
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
 .pop-up {
   animation: pop-up 1s ease forwards;
 }
@@ -83,7 +94,7 @@ body {
 .fade-in {
   animation: fade-in 1s ease forwards;
 }
-.fade-in-text{
+.fade-in-text {
   animation: fade-in 1s ease forwards;
   animation-timeline: view();
 }
@@ -139,7 +150,7 @@ body {
   transition: 2s;
   animation: background-transition linear forwards;
   animation-timeline: view();
-  animation-range-start: contain ;
+  animation-range-start: contain;
   animation-range-end: contain 30vh;
 }
 
@@ -487,33 +498,28 @@ section:last-child,
   align-self: flex-start;
 }
 .footer-border {
- 
   border-radius: 30px 30px 0 0px;
 }
 .cta-border {
-  
   border-radius: 0px 0px 30px 30px;
 }
 .shadow_footer_yellow {
   box-shadow: 0 4px 6px white;
 }
 .hr-border {
- 
   border: none;
   border-top: 2px dotted white;
 }
 .hr-border.bend1 {
   rotate: 30deg;
-
 }
 .hr-border.bend2 {
   rotate: -30deg;
-
 }
 
 .ball {
   position: absolute;
- 
+
   background: #3d87f5;
   border-radius: 50%;
 }
@@ -559,18 +565,18 @@ section:last-child,
   }
 }
 .ball.first {
-  animation: moveBall 0.5s linear ;
+  animation: moveBall 0.5s linear;
   opacity: 1;
 }
-.ball.first-sm{
+.ball.first-sm {
   animation: moveBall-sm 0.5s linear;
   opacity: 1;
 }
-.ball.first-sm-md{
+.ball.first-sm-md {
   animation: moveBall-sm-md 0.5s linear;
   opacity: 1;
 }
-.ball.first-sm-xs{
+.ball.first-sm-xs {
   animation: moveBall-sm-xs 0.5s linear;
   opacity: 1;
 }
@@ -580,7 +586,7 @@ section:last-child,
   opacity: 1;
 }
 
-@keyframes moveBall1{
+@keyframes moveBall1 {
   0% {
     top: 46%;
     left: 5%;
@@ -595,7 +601,7 @@ section:last-child,
   opacity: 1;
 }
 
-@keyframes moveBall1-sm{
+@keyframes moveBall1-sm {
   0% {
     top: 48%;
     left: 5%;
@@ -610,7 +616,7 @@ section:last-child,
   opacity: 1;
 }
 
-@keyframes moveBall1-sm-md{
+@keyframes moveBall1-sm-md {
   0% {
     top: 48%;
     left: 5%;
@@ -710,13 +716,11 @@ section:last-child,
   }
 }
 
-.border-hero-animation{
-border: none;
-border-radius: 90px;
+.border-hero-animation {
+  border: none;
+  border-radius: 90px;
 }
 
 .carousel-item {
   flex: 0 0 100%;
 }
-
-

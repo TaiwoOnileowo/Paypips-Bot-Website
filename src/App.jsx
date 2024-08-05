@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -13,27 +13,42 @@ import Footer from "./components/Footer";
 import Payments from "./components/Payments";
 import Dashboard from "./components/Dashboard";
 import PricingResponsive from "./components/PricingResponsive";
+import PricingCTA from "./components/PricingCTA";
 
 // import Test from './components/Test'
 const App = () => {
   const [active, setActive] = useState();
+  const [pricingIndex, setPricingIndex] = useState(1);
+  console.log(active);
   return (
-    <div className="bg-white overflow-x-hidden h-screen">
+    <div className="bg-white relative overflow-x-hidden h-screen">
       <Header active={active} />
       <Hero />
 
       <About setActive={setActive} />
       <HowItWorks setActive={setActive} />
-      {/* <Test/> */}
+
       <Features setActive={setActive} />
       <WhyChooseUs />
       <Payments />
       <Dashboard />
-      <Pricing setActive={setActive} />
-      <PricingResponsive setActive={setActive} />
+      <Pricing
+        setActive={setActive}
+        index={pricingIndex}
+        setIndex={setPricingIndex}
+      />
+      {(active === "pricing" || active === "cta" || active === "pricing1") && (
+        <PricingCTA index={pricingIndex} setActive={setActive} />
+      )}
+
+      <PricingResponsive
+        setActive={setActive}
+        index={pricingIndex}
+        setIndex={setPricingIndex}
+      />
       <FeatureStroll />
 
-      <CTA />
+      <CTA setActive={setActive} />
       <Faqs />
       <Footer />
     </div>
