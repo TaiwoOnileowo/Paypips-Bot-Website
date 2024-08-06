@@ -3,7 +3,7 @@ import { pricing } from "../data";
 import Heading from "./Heading";
 import { FaCheck } from "react-icons/fa6";
 import { FaInfoCircle } from "react-icons/fa";
-const Pricing = ({ setActive , index, setIndex}) => {
+const Pricing = ({ setActive, index, setIndex }) => {
   const [visible, setVisible] = useState(false);
 
   const sectionRef = useRef(null);
@@ -52,16 +52,21 @@ const Pricing = ({ setActive , index, setIndex}) => {
             key={price.id}
             className={`flex ${
               visible && "jump-in"
-            } flex-col text-medium-gray p-6 hover:scale-[1.02] w-[400px] h-[480px] transition-all ease   col-span-1  cursor-default  rounded-[15px] gap-2 light-blue-gradient ${
+            } flex-col text-medium-gray p-6 hover:scale-[1.02] w-[400px] h-[500px] transition-all ease   col-span-1  cursor-default  rounded-[15px] gap-2 light-blue-gradient ${
               i === index
                 ? "border-blue-accent border-2 shadow-2xl"
                 : "border-none shadow-xl"
             }   
              `}
-            onClick={() => setIndex(i)}
+            onClick={() => {
+              setIndex(i);
+              setActive("pricing");
+            }}
           >
             <div className="flex justify-between">
-              <h1 className="">{price.name}</h1>
+              <h1 className="">
+                {price.name} {i === 1 && "(Most Popular)"}
+              </h1>
               <div
                 className={`w-6 h-6   rounded-full flex items-center justify-center ${
                   i === index ? "bg-blue-accent" : "bg-white"
@@ -74,7 +79,10 @@ const Pricing = ({ setActive , index, setIndex}) => {
               ${price.amount}
               <span className="text-sm  text-medium-gray">/month</span>
             </h2>
-            <p className="text-sm text-wrap">{price.text} </p>
+
+            <p className="text-sm text-wrap">
+              {i === 1 ? price.text2 : price.text}{" "}
+            </p>
             {/* <p className="text-text-medium-gray text-sm inline-flex items-center gap-2 w-[90%] text-white bg-blue-accent p-2 rounded-full justify-center">
               {price.transaction_fee}% transaction fee <FaInfoCircle />
             </p> */}
@@ -92,9 +100,18 @@ const Pricing = ({ setActive , index, setIndex}) => {
                     <span className="bg-blue-accent h-4 flex items-center justify-center w-4 rounded-full">
                       <FaCheck className=" text-xs text-white" />
                     </span>
-                    <span key={index} className="">
-                      {benefit}
-                    </span>
+                    {index === 0 ? (
+                      <span
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            "Card, Bank Transfer <br> USDT, BTC, ETH - Crypto Payment options",
+                        }}
+                      />
+                    ) : (
+                      <span key={index} className="">
+                        {benefit}
+                      </span>
+                    )}
                   </p>
                 ))}
               </div>
@@ -102,7 +119,6 @@ const Pricing = ({ setActive , index, setIndex}) => {
           </div>
         ))}
       </div>
-      
     </section>
   );
 };

@@ -80,6 +80,7 @@ const PricingResponsive = ({ setActive, setIndex, index }) => {
                   ? "border-blue-accent border-2 shadow-2xl"
                   : "border-none shadow-xl"
               }`}
+              onClick={()=> setActive("pricing1")}
             >
               <div className="flex justify-between">
                 <h1 className="">{price.name}</h1>

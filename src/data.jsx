@@ -95,8 +95,8 @@ export const pricing = [
     amount_annual: 0,
     transaction_fee: 8,
     benefits: {
-      1: "Card, Bank Transfer & USDT Crypto Payments",
-      2: "Basic Group Management",
+      1: "Card, Bank Transfer <br> USDT, BTC, ETH - Crypto Payment options",
+      2: "Automated Group and Subscription Management",
       3: "Email Support",
       4: "Automated Renewal Reminders",
       5: "Analytics Dashboard",
@@ -108,7 +108,8 @@ export const pricing = [
       // 4: "Automated Renewal Reminders",
       // 5: "Analytics Dashboard",
     },
-    text: "+ 0 fees till $1000 in transactions, then 8% transaction fee",
+    text: "+ Zero fees till $1000 in transactions, then 8% fee",
+    // text2: ""
     button: "Start For Free",
   },
   // {
@@ -131,7 +132,7 @@ export const pricing = [
   {
     id: 2,
     name: "Premium",
-    amount: 249,
+    amount: 149,
     amount_annual: 990,
     transaction_fee: 2.5,
     benefits: {
@@ -157,6 +158,7 @@ export const pricing = [
       // 9: "24/7 Priority Phone & Email Support",
     },
     text: "+ 3% transaction fee on every $100",
+    text2: "+ 2.5% transaction fee",
     button: "Get Started",
   },
 ];
