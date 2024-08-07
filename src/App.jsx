@@ -15,8 +15,7 @@ import Dashboard from "./components/Dashboard";
 import PricingResponsive from "./components/PricingResponsive";
 import PricingCTA from "./components/PricingCTA";
 import { useModal } from "./ui/AnimatedModal";
-
-import Modalb from "./components/Modalb";
+import Modal from "./components/Modal";
 const App = () => {
   const [active, setActive] = useState();
   const [pricingIndex, setPricingIndex] = useState(1);
@@ -55,7 +54,7 @@ const App = () => {
         setIndex={setPricingIndex}
       />
 
-      <Modalb />
+      <Modal />
 
       <FeatureStroll />
 

@@ -1,15 +1,15 @@
 import React from "react";
-import { ModalBody, ModalContent } from "../ui/AnimatedModal";
+import { ModalBody, ModalContent } from "../ui/AnimatedModal.tsx";
+
 import ModalForm from "./ModalForm.jsx";
-const Modalb = () => {
+const Modal = () => {
   return (
     <ModalBody>
       <ModalContent>
-        {/* <h1></h1> */}
         <ModalForm />
       </ModalContent>
     </ModalBody>
   );
 };
 
-export default Modalb;
+export default Modal;

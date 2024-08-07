@@ -12,6 +12,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
     "aos": "^3.0.0-beta.6",
+    "axios": "^1.7.3",
     "clsx": "^2.1.1",
     "framer-motion": "^11.3.21",
     "react": "^18.2.0",

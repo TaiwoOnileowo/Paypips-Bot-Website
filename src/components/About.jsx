@@ -44,8 +44,7 @@ const About = ({ setActive }) => {
             operations, enhance member engagement, and achieve their business
             goals.
           </p>
-        </div>
-       
+        </div>  
       </div>
     </section>
   );

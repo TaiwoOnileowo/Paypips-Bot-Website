@@ -80,7 +80,7 @@ const PricingResponsive = ({ setActive, setIndex, index }) => {
                   ? "border-blue-accent border-2 shadow-2xl"
                   : "border-none shadow-xl"
               }`}
-              onClick={()=> setActive("pricing1")}
+              onClick={() => setActive("pricing1")}
             >
               <div className="flex justify-between">
                 <h1 className="">{price.name}</h1>
@@ -96,7 +96,10 @@ const PricingResponsive = ({ setActive, setIndex, index }) => {
                 ${price.amount}
                 <span className="text-sm text-medium-gray">/month</span>
               </h2>
-              <p className="text-xs  text-wrap">{price.text} </p>
+              <p className="text-xs  text-wrap">
+                {" "}
+                {i === 1 ? price.text2 : price.text}{" "}
+              </p>
               {/* <p className="text-xs xs:text-sm inline-flex items-center gap-2 w-[90%] text-white bg-blue-accent p-2 rounded-full justify-center">
                 {price.transaction_fee}% transaction fee <FaInfoCircle />
               </p> */}
@@ -110,10 +113,7 @@ const PricingResponsive = ({ setActive, setIndex, index }) => {
               <div className="flex flex-col mt-4 justify-between gap-0">
                 <div className="flex gap-2 flex-col text-xs xs:text-base">
                   {Object.values(price.benefits).map((benefit, index) => (
-                    <p
-                      key={index}
-                      className="flex gap-2 text-xs  items-center"
-                    >
+                    <p key={index} className="flex gap-2 text-xs  items-center">
                       <span className="bg-blue-accent xs:h-4 p-1 flex items-center justify-center xs:w-4 rounded-full">
                         <FaCheck className="text-white text-xs" />
                       </span>
