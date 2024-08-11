@@ -189,10 +189,12 @@ body {
 .pop-in.show {
   animation: pop-up 0.5s ease-out forwards;
 }
-
-.jump-in {
-  animation: jump-in 1s ease-out forwards;
+@media (min-width: 1280px) {
+  .jump-in {
+    animation: jump-in 1s ease-out forwards;
+  }
 }
+
 @keyframes jump-in {
   0% {
     scale: 0;

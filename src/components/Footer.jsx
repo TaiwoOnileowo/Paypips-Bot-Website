@@ -4,11 +4,14 @@ import { footer } from "../data";
 import { BsInstagram } from "react-icons/bs";
 import { FaTwitter } from "react-icons/fa";
 import { FaTelegramPlane } from "react-icons/fa";
+import Button from "./Button";
 const Footer = () => {
   return (
     <section
       id="footer"
-      className= {`${window.innerWidth > 1020 ? "footer-border" : null} relative shadow_footer_yellow bg-primary-gradient  text-white w-full overflow-y-hidden py-8 flex pt-24 flex-col items-center gap-12 xsm:gap-24 justify-between`}
+      className={`${
+        window.innerWidth > 1020 ? "footer-border" : null
+      } relative shadow_footer_yellow bg-primary-gradient  text-white w-full overflow-y-hidden py-8 flex pt-24 flex-col items-center gap-12 xsm:gap-24 justify-between`}
     >
       <div className="blur absolute z-[0] w-[60%]  h-[60%]  top-[80%] rounded-[50%] opacity-40 bg-shining-gradient" />
 
@@ -18,11 +21,7 @@ const Footer = () => {
         <p className="pt-6 xs:w-[300px] text-center">
           Transform your Forex Telegram Community Management
         </p>
-        <a href="https://t.me/paypips_adminBot">
-          <button className="w-[150px] bg-shining-gradient text-white mr-6 py-[10px] mt-8 shadow_yellow rounded-full px-4">
-            Get Started
-          </button>
-        </a>
+        <Button text="Get Started" />
       </div>
       <div className="flex justify-between xsm:flex-row flex-col-reverse gap-6 items-center text-white w-full px-16">
         <ul className="hidden ss:flex gap-[6px] xs:gap-6">

@@ -1,10 +1,11 @@
 import React from "react";
 import HeroAnimation from "./HeroAnimation";
+import Button from "./Button";
 
 const Hero = () => {
   return (
     <section className="relative flex xsm:flex-row flex-col bg-dark-bg px-8 msm:px-16 text-white xsm:pt-0 pt-32 md:h-[120%]  xsm:h-[70vh] items-center justify-center gap-12 xsm:gap-8 msm:gap-10 md:gap-16">
-         <div className="blur absolute z-[0] w-[40%] animate-pulse h-[30%] top-[40%] -left-[3%]  rounded-[50%] opacity-80 bg-shining-gradient" />
+      <div className="blur absolute z-[0] w-[40%] animate-pulse h-[30%] top-[40%] -left-[3%]  rounded-[50%] opacity-80 bg-shining-gradient" />
       <div className="flex flex-col justify-center z-[1]">
         <h3 className="uppercase text-blue-accent text-sm md:text-base py-2">
           Paypips
@@ -16,13 +17,9 @@ const Hero = () => {
           PayPips provides powerful tools for Telegram community owners to
           streamline management and maximize engagement.
         </p>
-        <a href="https://t.me/paypips_adminBot">
-          <button className="bg-blue-accent mt-10  text-white z-[100] cursor-pointer hover:bg-shining-gradient hover:scale-[1.02] transition-all ease-in-out duration-300 text-lg font-bold w-[200px] py-3 rounded-md">
-            Get Started
-          </button>
-        </a>
+        <Button text="Get Started" />
       </div>
-    <HeroAnimation/>
+      <HeroAnimation />
     </section>
   );
 };

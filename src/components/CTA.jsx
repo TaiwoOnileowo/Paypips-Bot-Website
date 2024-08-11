@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from "react";
+import Button from "./Button";
 
 const CTA = ({setActive}) => {
   const sectionRef = useRef(null);
@@ -47,10 +48,10 @@ const CTA = ({setActive}) => {
           fill="#ebecf0"
         ></path>
       </svg>
-      <div className="bg-dark-bg  sm:flex-row flex flex-col msm:gap-32 xsm:px-12 p-6 xs:p-8 xsm:p-8 rounded-[20px] ">
+      <div className="bg-dark-bg  sm:flex-row flex flex-col msm:gap-32 xsm:px-12 p-6 xs:p-12 xsm:p-16 rounded-[20px] ">
         <div className="flex-1 flex flex-col">
           <h2
-            className={`font-semibold xsm:text-[48px] text-[18px] xs:text-[30px] text-white w-full}`}
+            className={`font-semibold xsm:text-[48px] text-[18px] xs:text-3xl text-white w-full}`}
           >
             Lets try Paypips now
           </h2>
@@ -62,13 +63,9 @@ const CTA = ({setActive}) => {
           </p>
         </div>
         <div
-          className={` sm:ml-10 ml-0  items-center justify-center flex sm:mt-0 xsm:mt-10`}
+          className={` mt-4 xsm:mt-10`}
         >
-          <a href="https://t.me/paypips_adminBot">
-            <button className="w-[150px] text-white bg-shining-gradient py-2 mt-6 shadow_yellow rounded-full px-4">
-              Get Started
-            </button>
-          </a>
+        <Button text="Get Started"/>
         </div>
       </div>
     </section>

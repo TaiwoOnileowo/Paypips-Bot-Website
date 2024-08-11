@@ -58,7 +58,7 @@ const PricingResponsive = ({ setActive, setIndex, index }) => {
     <section
       ref={sectionRef}
       id="pricing1"
-      className="relative  bg-white pt-12 pb-24 md:pb-48 flex md:hidden flex-col justify-center items-center"
+      className="relative  bg-white pt-12 pb-24 flex md:hidden flex-col justify-center items-center"
     >
       <Heading text="Pricing" color={"black"} />
       <div className="blur1 absolute z-[0] w-[10%] h-[10%] left-[46%] top-[40%] opacity-80 rounded-[50%] bg-white-gradient" />

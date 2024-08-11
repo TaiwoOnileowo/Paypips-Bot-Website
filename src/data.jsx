@@ -18,7 +18,7 @@ export const navLinks = [
   },
   {
     name: "Pricing",
-    href: window.innerWidth > 1200 ? "pricing" : "pricing2",
+    href: "pricing",
   },
 ];
 
@@ -90,16 +90,34 @@ export const moreFeatures = [
 export const pricing = [
   {
     id: 1,
-    name: "Free Tier",
+    name: "Basic Plan",
+    amount: 0,
+    amount_annual: 0,
+    transaction_fee: 3,
+    benefits: {
+      1: "Card, Bank Transfer <br> USDT, BTC, ETH - Crypto Payment options",
+      2: "Automatically send an invite link to users after payment",
+      3: "Basic analytics to track transactions and payment status",
+      4: "Email support",
+      5: "3% Transaction fee",
+    },
+    text: "+ 3% transaction fee",
+    ctatext:
+      "Perfect for one-off transactions. A use-case would be one time payment for a Mentorship group.",
+    button: "Start For Free",
+  },
+  {
+    id: 2,
+    name: "Growth Plan",
     amount: 0,
     amount_annual: 0,
     transaction_fee: 8,
     benefits: {
-      1: "Card, Bank Transfer <br> USDT, BTC, ETH - Crypto Payment options",
+      1: "Everything in Basic Plan",
       2: "Automated Group and Subscription Management",
-      3: "Email Support",
-      4: "Automated Renewal Reminders",
-      5: "Analytics Dashboard",
+      3: "Automated Renewal Reminders",
+      4: "Dashboard Analytics with metrics on user engagement, transaction volumes, and revenue tracking.",
+      5: "8% (transaction + Management) fee",
     },
     benefits_sm: {
       1: "Card, Bank Transfer & USDT Crypto Payments",
@@ -109,42 +127,25 @@ export const pricing = [
       // 5: "Analytics Dashboard",
     },
     text: "+ Zero fees till $1000 in transactions, then 8% fee",
-    // text2: ""
+    ctatext:
+      "Tailored for those who need more automation without upfront costs, allowing you to scale first before paying more fees.",
     button: "Start For Free",
   },
-  // {
-  //   id: 2,
-  //   name: "Standard Plan",
-  //   amount: 99,
-  //   amount_annual: 490,
-  //   transaction_fee: 5,
-  //   benefits: {
-  //     1: "Everything from Free Tier",
-  //     2: "Expanded Payment Options: USDT,Crypto",
-  //     3: "Advanced Analytics",
-  //     4: "Access Codes",
-  //     5: "Priority Email Support",
-  //     6: "Custom Broadcasts",
-  //   },
-  //   // text: "Best if you're making up to $2.5K/mo",
-  //   button: "Start free trial",
-  // },
   {
-    id: 2,
-    name: "Premium",
+    id: 3,
+    name: "Professional Plan",
     amount: 149,
     amount_annual: 990,
     transaction_fee: 2.5,
     benefits: {
-      1: " All Free Tier features",
-      2: "Full bot Customization to your Brand",
-      3: "Priority Email Support for members",
-      4: " Access Codes",
-      5: "Comprehensive Analytics",
-      6: "Custom Broadcasts",
-      7: "Dedicated Account Manager",
-      8: "Comprehensive Analysis",
-      9: "24/7 Priority Phone & Email Support",
+      1: "Every feature in Growth Plan",
+
+      2: "Custom broadcast messages to all subscribers.",
+      3: "Access Codes for exclusive content or events.",
+      4: "24/7 phone and email support with a dedicated account manager custom setup, e.g Waitlist",
+      5: "Priority onboarding and setup assistance.",
+      6: "Exclusive Perks: VIP access to beta features and early access to new integrations.",
+      7: "Lower transaction fee of 3%",
     },
     benefits_sm: {
       1: " All Free Tier features",
@@ -158,7 +159,8 @@ export const pricing = [
       // 9: "24/7 Priority Phone & Email Support",
     },
     text: "+ 3% transaction fee on every $100",
-    text2: "+ 2.5% transaction fee",
+    ctatext:
+      "Ideal for established communities. Premium service that ensures smooth operations and enhances your members satisfaction.",
     button: "Get Started",
   },
 ];
@@ -262,7 +264,7 @@ export const footer = [
   },
   {
     id: "3",
-    text: "How it Works",
+    text: "How",
     link: "#how-it-works",
   },
   {

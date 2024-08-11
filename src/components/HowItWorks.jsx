@@ -103,7 +103,7 @@ const HowItWorks = ({ setActive }) => {
       </svg>
 
       <Heading text="How It Works" color="black" />
-      <div className="flex md:flex-row flex-wrap  gap-10 items-center justify-center mt-16">
+      <div className="grid xsm:grid-cols-3  gap-10 items-center justify-center mt-16">
         <div
           onMouseEnter={initiateChatAnimation}
           className={`light-blue-gradient p-6 ${visible && "jump-in"}

@@ -18,13 +18,12 @@ import { useModal } from "./ui/AnimatedModal";
 import Modal from "./components/Modal";
 const App = () => {
   const [active, setActive] = useState();
-  const [pricingIndex, setPricingIndex] = useState(1);
-  console.log(active);
+  const [pricingIndex, setPricingIndex] = useState(2);
   const { open } = useModal();
 
   return (
     <div className="bg-white relative overflow-x-hidden h-screen">
-      <Header active={active} />
+      {/* <Header active={active} /> */}
       <Hero />
 
       <About setActive={setActive} />
@@ -39,20 +38,13 @@ const App = () => {
         index={pricingIndex}
         setIndex={setPricingIndex}
       />
-      {(active === "pricing" || active === "cta" || active === "pricing1") &&
-        !open && (
-          <PricingCTA
-            index={pricingIndex}
-            active={active}
-            setActive={setActive}
-          />
-        )}
-
-      <PricingResponsive
-        setActive={setActive}
-        index={pricingIndex}
-        setIndex={setPricingIndex}
-      />
+      {active === "pricing" && !open && (
+        <PricingCTA
+          index={pricingIndex}
+          active={active}
+          setActive={setActive}
+        />
+      )}
 
       <Modal />
 
