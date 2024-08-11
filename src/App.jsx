@@ -23,7 +23,7 @@ const App = () => {
 
   return (
     <div className="bg-white relative overflow-x-hidden h-screen">
-      {/* <Header active={active} /> */}
+      <Header active={active} />
       <Hero />
 
       <About setActive={setActive} />
