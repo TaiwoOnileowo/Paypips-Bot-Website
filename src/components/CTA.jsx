@@ -56,7 +56,7 @@ const CTA = ({setActive}) => {
             Lets try Paypips now
           </h2>
           <p
-            className={`font-normal text-light-gray text-sm xs:text-[18px] max-w-[470px] mt-1 xs:mt-5`}
+            className={`font-normal text-light-gray text-sm xsm:text-[18px] max-w-[470px] mt-1 xs:mt-5`}
           >
             Start Your Free Trial Now and Transform Your Forex Telegram
             Community Management!

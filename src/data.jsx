@@ -255,7 +255,7 @@ export const footer = [
   {
     id: "1",
     text: "Home",
-    link: "#",
+    link: "/",
   },
   {
     id: "5",
@@ -274,7 +274,7 @@ export const footer = [
   },
   {
     id: "2",
-    text: "Contact",
-    link: "#",
+    text: "Pricing",
+    link: "#pricing",
   },
 ];

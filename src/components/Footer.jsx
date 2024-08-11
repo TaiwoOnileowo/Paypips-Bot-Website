@@ -24,7 +24,7 @@ const Footer = () => {
         <Button text="Get Started" />
       </div>
       <div className="flex justify-between xsm:flex-row flex-col-reverse gap-6 items-center text-white w-full px-16">
-        <ul className="hidden ss:flex gap-[6px] xs:gap-6">
+        <ul className="hidden ss:flex gap-[6px] xs:gap-6 mt-4 xsm:mt-0">
           {footer.map((item) => (
             <li
               key={item.id}

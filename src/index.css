@@ -463,7 +463,6 @@ section:last-child,
 }
 
 .chat-box {
-  /* padding: 1.5rem; */
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
@@ -483,7 +482,7 @@ section:last-child,
 }
 
 .message.show {
-  animation: popIn2 1s ease;
+  /* animation: popIn2 1s ease; */
   display: flex;
 }
 

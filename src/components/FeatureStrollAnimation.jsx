@@ -40,7 +40,7 @@ const FeatureStrollAnimation = () => {
           timeouts.current.push(
             setTimeout(
               () => setChatAnimation((prev) => ({ ...prev, [`step${i}`]: true })),
-              i > 7 ? i * 1200 : i * 1000
+               i * 1000
             )
           );
         }
@@ -80,7 +80,7 @@ const FeatureStrollAnimation = () => {
   return (
     <div
       ref={chatBoxRef}
-      className="h-[580px] msm:h-[550px] text-xs xs:text-sm z-[10] xsm:w-[400px] w-full md:w-[500px] flex flex-col justify-end bg-accent-bg chat-box p-2 xsm:p-6 rounded-lg shadow-lg xsm:mt-12"
+      className="h-[550px] text-xs xs:text-sm z-[10] xsm:w-[400px] w-full md:w-[500px] flex flex-col justify-end bg-accent-bg chat-box p-2 xsm:p-6 rounded-lg shadow-lg xsm:mt-12"
       onMouseEnter={handleMouseEnter}
     >
       <div className="start-message message-sender ">
