@@ -8,7 +8,7 @@ import React, {
   useRef,
   useState,
 } from "react";
-
+import { useOutsideClick } from "../hooks/useClickOutside.js";
 interface ModalContextType {
   open: boolean;
   setOpen: (open: boolean) => void;
@@ -134,12 +134,7 @@ export const ModalFooter = ({
   className?: string;
 }) => {
   return (
-    <div
-      className={cn(
-        "flex justify-end p-4 bg-gray-100 ",
-        className
-      )}
-    >
+    <div className={cn("flex justify-end p-4 bg-gray-100 ", className)}>
       {children}
     </div>
   );
@@ -193,25 +188,26 @@ const CloseIcon = () => {
 
 // Hook to detect clicks outside of a component.
 // Add it in a separate file, I've added here for simplicity
-export const useOutsideClick = (
-  ref: React.RefObject<HTMLDivElement>,
-  callback: Function
-) => {
-  useEffect(() => {
-    const listener = (event: any) => {
-      // DO NOTHING if the element being clicked is the target element or their children
-      if (!ref.current || ref.current.contains(event.target)) {
-        return;
-      }
-      callback(event);
-    };
+// export const useOutsideClick = (
+//   ref: React.RefObject<HTMLDivElement>,
+//   callback: Function
+// ) => {
+//   useEffect(() => {
+//     const listener = (event: any) => {
 
-    document.addEventListener("mousedown", listener);
-    document.addEventListener("touchstart", listener);
+//       if (!ref.current || ref.current.contains(event.target)) {
+//         return;
+//       }
+//       callback(event);
+//     };
 
-    return () => {
-      document.removeEventListener("mousedown", listener);
-      document.removeEventListener("touchstart", listener);
-    };
-  }, [ref, callback]);
-};
+//     document.addEventListener("mousedown", listener);
+//     document.addEventListener("touchstart", listener);
+
+//     return () => {
+//       document.removeEventListener("mousedown", listener);
+//       document.removeEventListener("touchstart", listener);
+//     };
+//   }, [ref, callback]);
+// };
+

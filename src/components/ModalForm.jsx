@@ -31,7 +31,7 @@ const ModalForm = () => {
 
   return (
     <div className="w-full rounded-xl space-y-4">
-      <h1 className="text-2xl font-bold text-center">Get Started</h1>
+      
       <form onSubmit={handleSubmit} className="space-y-16">
         <div className="space-y-2">
           <div>

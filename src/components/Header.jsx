@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import logo from "../assets/logo.png";
 import { navLinks } from "../data.jsx";
 import { FiMenu, FiX } from "react-icons/fi";
@@ -77,8 +77,8 @@ const Header = ({ active }) => {
       </div>
       <div
         className={`fixed right-0 transition-opacity transform ${
-          menuOpen ? " opacity-100" : " opacity-0"
-        } md:hidden flex flex-col bg-primary-purple  p-6 rounded-[20px] items-center justify-center space-y-6`}
+          menuOpen ? "flex" : "hidden"
+        } md:hidden  flex-col bg-primary-purple  p-6 rounded-[20px] items-center justify-center space-y-6`}
       >
         <ul className="flex flex-col items-center justify-center gap-6">
           {navLinks.map((link, index) => (
