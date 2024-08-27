@@ -21,7 +21,7 @@ const ModalForm = () => {
       setSubmittedData([...submittedData, formData]);
       setFormData({ name: "", email: "" });
       setError(null);
-      window.open("https://t.me/paypips_adminBot", "_blank");
+      window.location.href = "https://t.me/paypips_adminBot";
       setOpen(false);
     } catch (error) {
       console.error("Error submitting data:", error);
